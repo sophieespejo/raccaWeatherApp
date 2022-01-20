@@ -17,3 +17,72 @@
     font-family: 'Biryani-SemiBold';
     src: url("../fonts/Biryani-SemiBold.ttf");
 }
+
+@font-face{
+    font-family: 'Philosopher';
+    src: url("../fonts/Philosopher-Regular.ttf");
+}
+
+.container-fluid{
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/daybg.png');
+  background-size: cover;
+  /* background-position: right bottom; */
+  background-repeat: no-repeat;
+}
+
+.whiteBg{
+    background-color: #ffffff;
+}
+
+.titleTxt{
+    font-family: 'Philosopher';
+    font-size: 2.2rem;
+    margin-bottom: 0 !important;
+    color: #707070;
+    font-weight: bold;
+}
+
+.form-control{
+    font-family: 'Biryani-Regular';
+    border-radius: 10px ;
+    font-size: 0.8reml
+}
+
+button{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #BDB8F8;
+    border: none;
+}
+
+.fas{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.currentWeatherContainer{
+    border-radius: 15px;
+}
+
+.locationTxt{
+    font-family: 'Biryani-Light';
+    font-size: 1.3rem;
+    color: #454545;
+    letter-spacing: 5px;
+}
+
+.far{
+    font-size: 20px;
+}
+
+.yellow{
+    color: #FFC400;
+}
+
+.currentWeatherIcon{
+    font-size: 100px;
+}
+
