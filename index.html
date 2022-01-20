@@ -15,50 +15,101 @@
     <div class="container-fluid">
       <!------MENU BAR-->
       <div class="row whiteBg align-items-center">
-        <div class="col-2"></div>
-        <div class="col-4 text-start">
+        <div class="col-3"></div>
+        <div class="col-3 text-start">
           <p class="titleTxt">climate.xchange</p>
+        </div>
+        <div class="col-1">
+
         </div>
         <div class="col-3">
           <input type="email" class="form-control" placeholder="Search for a city">
         </div>
-        <div class="col-2">
-          <button><i class="fas fa-search"></i></button>
+        <div class="col-1">
+          <button class="searchBtn"><i class="fas fa-search"></i></button>
         </div>
       </div>
       <!----END OF MENU BAR-->
-      <div class="row mt-4">
+      <div class="row justify-content-center mt-4">
         <!----favorites bar-->
-        <div class="col-3">
+        <div class="col-2">
 
         </div>
         <!-----current weather-->
         <div class="col-3">
           <div class="container currentWeatherContainer whiteBg">
             <div class="row">
-              <div class="col-9 mt-3">
-                <p class="locationTxt">San Francisco</p>
+              <div class="col-10 mt-3">
+                <p class="locationTxt">SAN FRANCISCO</p>
               </div>
-              <div class="col-3 mt-3 text-end">
-                <i class="far fa-heart"></i>
+              <div class="col-2 mt-2 text-end">
+                <button type="button" class="btn faveBtn"><i class="far fa-heart"></i></button>
+                
               </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-around">
               <div class="col-3">
-                <i class="weather-icon currentWeatherIcon yellow far fa-sun"></i>
+                <img class="currentWeatherIcon" src="./images/icons/8AMicon.svg" alt="">
               </div>
               <div class="col-8">
-                <p>54F</p>
+                <p class="currentTempTxt"><span class="currentTempTxt">54</span>°F</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="dayHr">
+              </div>
+            </div>
+            <div class="row justify-content-center mt-2">
+              <div class="col-4 text-start">
+                <p class="weatherDescTxt">cloudy</p>
+              </div>
+              <div class="col-7 text-end">
+                <p class="weatherDescTxt">H:<span>72</span>°F L:<span>37</span>°F</p>
               </div>
             </div>
           </div>
         </div>
-        <!----3 hour display-->
         <div class="col-3">
-
+          <div class="container currentWeatherContainer whiteBg">
+            <div class="row justify-content-between">
+              <div class="col-2 mt-3 text-start">
+                <p class="locationTxt">TODAY</p>
+              </div>
+              <div class="col-5 mt-3">
+                <p class="timeTxt"><span>HH</span>:<span>MM</span><span> AM</span></p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-4 d-flex text-center">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <p class="hourlyTxt">8am</p>
+                  </div>
+                  <div class="col-12">
+                    <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-4 d-flex">
+                <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
+              </div>
+              <div class="col-4 mt-1 d-flex">
+                <img class="hourlyWeatherIconMoon img-fluid mx-auto" src="./images/icons/nightIcon.svg" alt="">
+              </div>
+            </div>
+            <div class="row justify-content-center mt-2">
+              <div class="col-4 text-start">
+                <p class="weatherDescTxt">cloudy</p>
+              </div>
+              <div class="col-7 text-end">
+                <p class="weatherDescTxt">H:<span>72</span>°F L:<span>37</span>°F</p>
+              </div>
+            </div>
+          </div>
         </div>
         <!---nothin----->
-        <div class="col-3"></div>
+        <div class="col-2"></div>
       </div>
     </div><!----end of container fluid-->
     

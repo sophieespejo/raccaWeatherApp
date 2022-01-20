@@ -27,9 +27,8 @@
     height: 100vh;
     width: 100vw;
     background: url('../images/daybg.png');
-  background-size: cover;
-  /* background-position: right bottom; */
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .whiteBg{
@@ -38,7 +37,7 @@
 
 .titleTxt{
     font-family: 'Philosopher';
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 0 !important;
     color: #707070;
     font-weight: bold;
@@ -50,7 +49,7 @@
     font-size: 0.8reml
 }
 
-button{
+.searchBtn{
     height: 40px;
     width: 40px;
     border-radius: 10px;
@@ -71,7 +70,12 @@ button{
     font-family: 'Biryani-Light';
     font-size: 1.3rem;
     color: #454545;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+.faveBtn{
+    text-decoration: none;
 }
 
 .far{
@@ -79,10 +83,64 @@ button{
 }
 
 .yellow{
-    color: #FFC400;
+    filter: invert(83%) sepia(33%) saturate(4145%) hue-rotate(359deg) brightness(102%) contrast(102%);
 }
 
 .currentWeatherIcon{
-    font-size: 100px;
+    font-size: 10px;
 }
 
+.currentTempTxt{
+    font-family: 'Philosopher';
+    font-size: 5.6rem;
+    line-height: 1;
+    color: #454545;
+    margin-bottom: 12px;
+}
+
+.currentWeatherIcon{
+    height: 80px;
+    width: 80px;
+}
+
+.dayHr {
+    border:none;
+    border-top:2px dotted #989595;
+    color:#fff;
+    background-color:#fff;
+    height:1px;
+    width:90%;
+    padding-top: 0px;
+  }
+
+  .weatherDescTxt{
+      font-family: 'Philosopher';
+      font-size: 1.1rem;
+      color: #454545;
+  }
+
+  /* -----SECOND COLUMN */
+  .timeTxt{
+    font-family: 'Biryani-Light';
+    color: #454545;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+  }
+
+  .hourlyWeatherIcon{
+      height: 50px;
+      width: 50px;
+      margin-top: 0px;
+  }
+
+  .hourlyWeatherIconMoon{
+      height: 30px;
+      width: 30px;
+      margin-bottom: 0;
+  }
+
+  .hourlyTxt{
+      font-family: 'Biryani-Light';
+      font-size: 1rem;
+      margin-bottom: 0px;
+  }

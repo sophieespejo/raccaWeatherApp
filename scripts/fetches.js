@@ -1,4 +1,4 @@
-export let data, forecastData, longitude, latitude, currentTemp, weatherDesc, currentMin, currentMax, cityName, currentTime, day1MaxTemp, day1MinTemp, day1OverallTemp, day2MaxTemp, day2MinTemp, day2OverallTemp, day3MaxTemp, day3MinTemp, day3OverallTemp, day4MaxTemp, day4MinTemp, day4OverallTemp, day5MaxTemp, day5MinTemp, day5OverallTemp, fetchedData, eightAMtxt, noonTxt;
+export let data, forecastData, longitude, latitude, currentTemp, weatherDesc, currentMin, currentMax, cityName, currentTime, day1MaxTemp, day1MinTemp, day1OverallTemp, day2MaxTemp, day2MinTemp, day2OverallTemp, day3MaxTemp, day3MinTemp, day3OverallTemp, day4MaxTemp, day4MinTemp, day4OverallTemp, day5MaxTemp, day5MinTemp, day5OverallTemp, fetchedData, eightAMtxt, noonTxt, eightPMtxt;
 
 export function fetchCurrentData(location)
 {
@@ -19,38 +19,26 @@ export function fetch5DayForecast(latitude, longitude){
     ).then(
         data => {
             forecastData = data;
-            // console.log(forecastData);
-            // getForecastTxt(forecastData);
+            console.log(forecastData);
+            getForecastTxt(forecastData);
         }
     )
 }
 
-function fetch8AMandNoonData(latitude, longitude, midnightUTC){
-    fetch(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${midnightUTC}&units=imperial&appid=7501411bffa05223726106f51f48642c`).then(
-        response => response.json()
-    ).then(
-        data => {
-            fetchedData = data;
-            console.log(fetchedData);
-            get8AMandNoonTxt(fetchedData);
-        }
+// function fetch8AMandNoonData(latitude, longitude, midnightUTC){
+//     fetch(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${midnightUTC}&units=imperial&appid=7501411bffa05223726106f51f48642c`).then(
+//         response => response.json()
+//     ).then(
+//         data => {
+//             fetchedData = data;
+//             console.log(fetchedData);
+//             get8AMandNoonTxt(fetchedData);
+//         }
 
-    )
-}
+//     )
+// }
 
-//how to get 8pm data
-//get UTC timestamp of when weatherApp is used
-//compare to forecast api
-//list[i].dt => convert to format that shows time
-//find first value that is closest to 8PM?
-//what happens if it's past 5pm?
 
-function get8AMandNoonTxt(fetchedData)
-{
-    eightAMtxt = fetchedData.hourly[16].temp;
-    console.log("8AM is " + eightAMtxt);
-    noonTxt = fetchedData.hourly[20].temp;
-}
 
 export function getCurrentTxt(data){
     //what do i need from current weather API?
@@ -73,11 +61,6 @@ export function getCurrentTxt(data){
     latitude = data.coord.lat;
     longitude = data.coord.lon;
     fetch5DayForecast(latitude, longitude);
-    let timeNow = new Date();
-    let modifiedTime = new Date(timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), 1);
-    let midnightUTC = (modifiedTime.getTime() / 1000).toFixed(0);
-    console.log(midnightUTC);
-    fetch8AMandNoonData(latitude, longitude, midnightUTC);
 }
 
 export function getForecastTxt(forecastData){
@@ -96,4 +79,7 @@ export function getForecastTxt(forecastData){
     day5OverallTemp = forecastData.daily[5].temp.day;
     day5MinTemp = forecastData.daily[5].temp.min;
     day5MinTemp = forecastData.daily[5].temp.max;
+    eightAMtxt = forecastData.daily[0].temp.morn;
+    noonTxt = forecastData.daily[0].temp.day;
+    eightPMtxt = forecastData.daily[0].temp.night;
 }
