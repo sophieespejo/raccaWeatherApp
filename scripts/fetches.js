@@ -1,4 +1,10 @@
 export let data, forecastData, longitude, latitude, cityName, currentTime;
+ let allForecastWeatherDesc = [];
+ let dates = [];
+ let allForecastMornTemps = [];
+ let allForecastNoonTemps = [];
+ let allForecastNightTemps = [];
+
 
 export function fetchCurrentData(location)
 {
@@ -11,7 +17,7 @@ export function fetchCurrentData(location)
         }
     )
 }
-// fetchCurrentData('stockton');
+
 
 export function fetch5DayForecast(latitude, longitude){
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=imperial&exclude=minutely&appid=7501411bffa05223726106f51f48642c`).then(
@@ -46,23 +52,25 @@ export function getCurrentTxt(data){
 
 export function getForecastTxt(forecastData){
     let allForecastHighTempTxtArray = document.getElementsByClassName('allForecastHighTempTxt'),
-    allForecaseLowTempTxtsArray = document.getElementsByClassName('allForecaseLowTempTxt'), allFiveDayIcons = document.getElementsByClassName('fiveDayIcon'), allForecastDaysNamesArray = document.getElementsByClassName('forecastDaysArray'), allForecastMonthNumsArray = document.getElementsByClassName('forecastMonthNums'), allForecastDaysNumArray = document.getElementsByClassName('forecastDayNums');
+    allForecaseLowTempTxtsArray = document.getElementsByClassName('allForecaseLowTempTxt'), allForecastDaysNamesArray = document.getElementsByClassName('forecastDaysArray'), allForecastMonthNumsArray = document.getElementsByClassName('forecastMonthNums'), allForecastDaysNumArray = document.getElementsByClassName('forecastDayNums');
 
     let allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon');
-    
-    let dates = [];
+    const days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
     let months =[];
     let dayNums = [];
     let iconsArr = [];
-    const days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+
     for(let i = 1; i<= 5; i++)
     {
         dates.push(new Date(forecastData.daily[i].dt * 1000).getDay());
         months.push(new Date(forecastData.daily[i].dt * 1000).getMonth());
         dayNums.push(new Date(forecastData.daily[i].dt * 1000).getDate());
         iconsArr.push(forecastData.daily[i].weather[0].icon);
+        allForecastWeatherDesc.push(forecastData.daily[i].weather[0].description);
+        allForecastMornTemps.push(forecastData.daily[i].temp.morn);
+        allForecastNoonTemps.push(forecastData.daily[i].temp.day);
+        allForecastNightTemps.push(forecastData.daily[i].temp.night);
     }
-    console.log(iconsArr);
 
     for(let i = 0; i< allForecastHighTempTxtArray.length; i++)
     {
@@ -77,4 +85,12 @@ export function getForecastTxt(forecastData){
     dayTempTxt.textContent = Math.round(forecastData.daily[0].temp.day);
     nightTempTxt.textContent = Math.round(forecastData.daily[0].temp.night);
 
+
+    console.log(allForecastNightTemps);
+    return {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps};
 }
+
+
+export {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps};
+
+

@@ -1,4 +1,4 @@
-import { data, forecastData, fetchCurrentData, fetch5DayForecast, longitude, latitude, currentTime} from "./fetches.js";
+import { data, forecastData, fetchCurrentData, fetch5DayForecast, longitude, latitude, currentTime, allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps} from "./fetches.js";
 
 // fetchCurrentData();
 
@@ -31,7 +31,9 @@ let selectedCity = document.getElementById('selectedCity'),
     nightTempTxtForWhicheverDayClicked = document.getElementById('nightTempTxtForWhicheverDayClicked'),
     errorOverlay = document.getElementById('errorOverlay'),
     errorBox = document.getElementById('errorBox'),
-    searchAgainBtn = document.getElementById('searchAgainBtn');
+    searchAgainBtn = document.getElementById('searchAgainBtn'),
+    forecastBtns = document.getElementsByClassName('forecastBtn'),
+    dates1 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 
 
@@ -50,6 +52,60 @@ let openBtn = document.getElementById('openBtn'),
     document.getElementById("mySidenav").style.width = "0px";
   })
 
-  searchBtn.addEventListener('click', function(e){
+  searchBtn.addEventListener('click',  function(e){
       fetchCurrentData(citySearch.value);
   })
+
+for(let i = 0; i<forecastBtns.length; i++)
+{
+  forecastBtns[i].addEventListener('click', function(e){
+    getWeatherDescBasedOnDay(this.value);
+
+  })
+}
+
+function getWeatherDescBasedOnDay(buttonValue)
+{
+  moreInfoBox.classList.remove('d-none');
+  switch(buttonValue)
+  {
+    case "0":
+      weatherDescForWhicheverDayClicked.textContent = allForecastWeatherDesc[0];
+      whicheverDayClickedTxt.textContent = dates1[(dates[0])];
+      morningTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastMornTemps[0]);
+      noonTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNoonTemps[0]);
+      nightTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNightTemps[0]);
+      break;
+    case "1":
+        weatherDescForWhicheverDayClicked.textContent = allForecastWeatherDesc[1];
+        whicheverDayClickedTxt.textContent = dates1[(dates[1])];
+        morningTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastMornTemps[1]);
+        noonTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNoonTemps[1]);
+        nightTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNightTemps[1]);
+      break;
+    case "2":
+        weatherDescForWhicheverDayClicked.textContent = allForecastWeatherDesc[2];
+        whicheverDayClickedTxt.textContent = dates1[(dates[2])];
+        morningTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastMornTemps[2]);
+        noonTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNoonTemps[2]);
+        nightTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNightTemps[2]);
+      break;
+    case "3":
+        weatherDescForWhicheverDayClicked.textContent = allForecastWeatherDesc[3];
+        whicheverDayClickedTxt.textContent = dates1[(dates[3])];
+        morningTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastMornTemps[3]);
+        noonTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNoonTemps[3]);
+        nightTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNightTemps[3]);
+        break;
+    case "4":
+        weatherDescForWhicheverDayClicked.textContent = allForecastWeatherDesc[4];
+        whicheverDayClickedTxt.textContent = dates1[(dates[4])];
+        morningTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastMornTemps[4]);
+        noonTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNoonTemps[4]);
+        nightTempTxtForWhicheverDayClicked.textContent = Math.round(allForecastNightTemps[4]);
+        break;
+    default:
+        break;
+  }
+
+}
