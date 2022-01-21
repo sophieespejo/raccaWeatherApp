@@ -40,23 +40,23 @@
     background-color: #ffffff;
 }
 
-.whiteBg.dark-mode{
+.dayModeFontColor{
+    color: #707070;
+}
+
+.darkModeFontColor{
+    color: #ffffff;
+}
+
+.darkModeBlackBg{
     background-color: #2F2F2F;
 }
+
 
 .titleTxt{
     font-family: 'Philosopher';
     font-size: 1.8rem;
     margin-bottom: 0 !important;
-    color: #707070;
-    font-weight: bold;
-}
-
-.titleTxt.dark-mode{
-    font-family: 'Philosopher';
-    font-size: 1.8rem;
-    margin-bottom: 0 !important;
-    color: #ffffff;
     font-weight: bold;
 }
 
@@ -83,23 +83,9 @@
     border-radius: 15px;
 }
 
-.currentWeatherContainer.dark-mode{
-    border-radius: 15px;
-    background-color: #2F2F2F;
-}
-
 .locationTxt{
     font-family: 'Biryani-Light';
     font-size: 1.3rem;
-    color: #454545;
-    letter-spacing: 3px;
-    margin-bottom: 0px;
-}
-
-.locationTxt.dark-mode{
-    font-family: 'Biryani-Light';
-    font-size: 1.3rem;
-    color: #ffffff;
     letter-spacing: 3px;
     margin-bottom: 0px;
 }
@@ -121,15 +107,6 @@
     font-family: 'Philosopher';
     font-size: 5.6rem;
     line-height: 1;
-    color: #454545;
-    margin-bottom: 12px;
-}
-
-.currentTempTxt.dark-mode{
-    font-family: 'Philosopher';
-    font-size: 5.6rem;
-    line-height: 1;
-    color: #ffffff;
     margin-bottom: 12px;
 }
 
@@ -161,19 +138,13 @@
 .weatherDescTxt{
       font-family: 'Philosopher';
       font-size: 1.5rem;
-      color: #454545;
 }
 
-.weatherDescTxt{
-    font-family: 'Philosopher';
-    font-size: 1.5rem;
-    color: #ffffff;
-}
+
 
   /* -----SECOND box styling */
   .timeTxt{
     font-family: 'Biryani-Light';
-    color: #454545;
     font-size: 1.2rem;
     margin-bottom: 0px;
   }
