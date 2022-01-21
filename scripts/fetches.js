@@ -1,4 +1,4 @@
-export let data, forecastData, longitude, latitude, currentTemp, weatherDesc, currentMin, currentMax, cityName, currentTime, day1MaxTemp, day1MinTemp, day1OverallTemp, day2MaxTemp, day2MinTemp, day2OverallTemp, day3MaxTemp, day3MinTemp, day3OverallTemp, day4MaxTemp, day4MinTemp, day4OverallTemp, day5MaxTemp, day5MinTemp, day5OverallTemp, fetchedData, eightAMtxt, noonTxt, eightPMtxt;
+let data, forecastData, longitude, latitude, currentTemp, weatherDesc, currentMin, currentMax, cityName, currentTime, day1MaxTemp, day1MinTemp, day1OverallTemp, day2MaxTemp, day2MinTemp, day2OverallTemp, day3MaxTemp, day3MinTemp, day3OverallTemp, day4MaxTemp, day4MinTemp, day4OverallTemp, day5MaxTemp, day5MinTemp, day5OverallTemp, fetchedData, eightAMtxt, noonTxt, eightPMtxt;
 
 export function fetchCurrentData(location)
 {
@@ -24,21 +24,6 @@ export function fetch5DayForecast(latitude, longitude){
         }
     )
 }
-
-// function fetch8AMandNoonData(latitude, longitude, midnightUTC){
-//     fetch(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${midnightUTC}&units=imperial&appid=7501411bffa05223726106f51f48642c`).then(
-//         response => response.json()
-//     ).then(
-//         data => {
-//             fetchedData = data;
-//             console.log(fetchedData);
-//             get8AMandNoonTxt(fetchedData);
-//         }
-
-//     )
-// }
-
-
 
 export function getCurrentTxt(data){
     //what do i need from current weather API?
