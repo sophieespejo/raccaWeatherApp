@@ -278,7 +278,7 @@
           <div class="container currentWeatherContainer whiteBg">
             <div class="row">
               <div class="col-10 mt-3">
-                <p class="locationTxt dayModeFontColor">SAN FRANCISCO</p>
+                <p id="selectedCity" class="locationTxt dayModeFontColor">SAN FRANCISCO</p>
               </div>
               <div class="col-2 mt-2 text-end">
                 <button type="button" class="btn faveBtn "><i class="far fa-heart"></i></button>
@@ -287,22 +287,22 @@
             </div>
             <div class="row justify-content-around">
               <div class="col-3">
-                <img class="currentWeatherIcon" src="./images/icons/8AMicon.svg" alt="">
+                <img id="currentWeatherIcon" class="currentWeatherIcon" src="./images/icons/8AMicon.svg" alt="">
               </div>
               <div class="col-8">
-                <p class="currentTempTxt dayModeFontColor"><span class="currentTempTxt dayModeFontColor">54</span>°F</p>
+                <p class="currentTempTxt dayModeFontColor"><span id="currentTempTxt" class="currentTempTxt dayModeFontColor">54</span>°F</p>
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="dayHr dark-mode">
+              <div class="dayHr">
               </div>
             </div>
             <div class="row justify-content-center mt-2">
               <div class="col-4 text-start">
-                <p class="weatherDescTxt dayModeFontColor">cloudy</p>
+                <p id="weatherDescTxt" class="weatherDescTxt dayModeFontColor">cloudy</p>
               </div>
               <div class="col-7 text-end">
-                <p class="weatherDescTxt dayModeFontColor">H:<span>72</span>°F L:<span>37</span>°F</p>
+                <p class="weatherDescTxt dayModeFontColor">H:<span id="currentHighTempTxt">72</span>°F L:<span id="currentLowTempTxt">37</span>°F</p>
               </div>
             </div>
           </div>
@@ -314,7 +314,7 @@
                 <p class="locationTxt dayModeFontColor">TODAY</p>
               </div>
               <div class="col-6 mt-3 text-end">
-                <p class="timeTxt dayModeFontColor"><span>HH</span>:<span>MM</span><span> AM</span></p>
+                <p class="timeTxt dayModeFontColor"><span id="currentHourTxt">HH</span>:<span id="currentMinuteTxt">MM</span><span id="AMPMTxt"> AM</span></p>
               </div>
             </div>
            <div class="row mt-3 hourRow justify-content-between"> 
@@ -327,7 +327,7 @@
                       <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
                     </div>
                     <div class="col-12">
-                      <p class="hourlyTempTxt "><span>##</span>°</p>
+                      <p class="hourlyTempTxt "><span id="morningTempTxt">##</span>°</p>
                     </div>
                   </div>
                   <div class="offset-4 vertical_dotted_line">
@@ -342,7 +342,7 @@
                       <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
                     </div>
                     <div class="col-12">
-                      <p class="hourlyTempTxt"><span>##</span>°</p>
+                      <p class="hourlyTempTxt"><span id="dayTempTxt">##</span>°</p>
                     </div>
                   </div>
                   <div class="col-1 vertical_dotted_line offset-3">
@@ -357,7 +357,7 @@
                       <img class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
                     </div>
                     <div class="col-12 mb-1">
-                      <p class="hourlyTempTxt"><span>##</span>°</p>
+                      <p class="hourlyTempTxt"><span id="nightTempTxt">##</span>°</p>
                     </div>
                   </div>
                 </div>
@@ -377,57 +377,57 @@
           <div class="row justify-content-around">
             <div class="col-2 forecastBox p-0">
               <div class="row text-center mt-2">
-                <p class="forecastDate"><span>Wed</span> <span>12</span>/<span>8</span></p>
+                <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
               </div>
               <div class="row justify-content-center">
                 <img class="fiveDayIcon" src="./images/icons/09d.png" alt="">
               </div>
               <div class="row text-center mt-2">
-                <p class="highLowTxt"><span>74</span>°F I <span>34</span>°F</p>
+                <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
               </div>
             </div>
             <div class="col-2 forecastBox p-0">
               <div class="row text-center mt-2">
-                <p class="forecastDate"><span>Wed</span> <span>12</span>/<span>8</span></p>
+                <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
               </div>
               <div class="row justify-content-center">
                 <img class="fiveDayIcon" src="./images/icons/09d.png" alt="">
               </div>
               <div class="row text-center mt-2">
-                <p class="highLowTxt"><span>74</span>°F I <span>34</span>°F</p>
+                <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
               </div>
             </div>
             <div class="col-2 forecastBox p-0">
               <div class="row text-center mt-2">
-                <p class="forecastDate"><span>Wed</span> <span>12</span>/<span>8</span></p>
+                <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
               </div>
               <div class="row justify-content-center">
                 <img class="fiveDayIcon" src="./images/icons/09d.png" alt="">
               </div>
               <div class="row text-center mt-2">
-                <p class="highLowTxt"><span>74</span>°F I <span>34</span>°F</p>
+                <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
               </div>
             </div>
             <div class="col-2 forecastBox p-0">
               <div class="row text-center mt-2">
-                <p class="forecastDate"><span>Wed</span> <span>12</span>/<span>8</span></p>
+                <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
               </div>
               <div class="row justify-content-center">
                 <img class="fiveDayIcon" src="./images/icons/09d.png" alt="">
               </div>
               <div class="row text-center mt-2">
-                <p class="highLowTxt"><span>74</span>°F I <span>34</span>°F</p>
+                <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
               </div>
             </div>
             <div class="col-2 forecastBox p-0">
               <div class="row text-center mt-2">
-                <p class="forecastDate"><span>Wed</span> <span>12</span>/<span>8</span></p>
+                <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
               </div>
               <div class="row justify-content-center">
                 <img class="fiveDayIcon" src="./images/icons/09d.png" alt="">
               </div>
               <div class="row text-center mt-2">
-                <p class="highLowTxt"><span>74</span>°F I <span>34</span>°F</p>
+                <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
               </div>
             </div>
           </div>
@@ -438,15 +438,15 @@
       </div>
       <!-- more details row -->
       <div class="row mt-3 justify-content-center">
-        <div class="col-6 moreInfoBox">
+        <div id="moreInfoBox" class="col-6 moreInfoBox">
           <div class="container">
             <div class="row justify-content-between mt-4">
               <div class="col-6">
                 <div class="row">
-                  <p class="moreInfoTxt">WEDNESDAY</p>
+                  <p id="whicheverDayClickedTxt" class="moreInfoTxt">WEDNESDAY</p>
                 </div>
                 <div class="row dotted-gradient">
-                  <p class="forecastDesc mt-3">Weather description</p>
+                  <p id="weatherDescForWhicheverDayClicked" class="forecastDesc mt-3">Weather description</p>
                 </div>
               </div>
               <div class="col-5">
@@ -457,10 +457,10 @@
                         <p class="hourlyTxt">8am</p>
                       </div>
                       <div class="col-12">
-                        <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
+                        <img id="morningWeatherIconForWhicheverDayClicked" class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
                       </div>
                       <div class="col-12">
-                        <p class="hourlyTempTxt"><span>##</span>°</p>
+                        <p class="hourlyTempTxt"><span id="morningTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
                     <div class="offset-4 vertical_dotted_line">
@@ -472,10 +472,10 @@
                         <p class="hourlyTxt">noon</p>
                       </div>
                       <div class="col-12 text-center">
-                        <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
+                        <img id="noonWeatherIconForWhicheverDayClicked" class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
                       </div>
                       <div class="col-12 text-center">
-                        <p class="hourlyTempTxt"><span>##</span>°</p>
+                        <p class="hourlyTempTxt"><span id="noonTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
                     <div class="col-1 vertical_dotted_line offset-3">
@@ -487,10 +487,10 @@
                         <p class="hourlyTxt">8pm</p>
                       </div>
                       <div class="col-12">
-                        <img class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
+                        <img id="nightWeatherIconForWhicheverDayClicked" class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
                       </div>
                       <div class="col-12 mb-1">
-                        <p class="hourlyTempTxt"><span>##</span>°</p>
+                        <p class="hourlyTempTxt"><span id="nightTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
                   </div>
@@ -510,17 +510,17 @@
         <p class="footerTxt">handcrafted by Joseph Racca</p>
       </div>
     </div><!----end of container fluid-->
-    <div class="overlay">
+    <div id="errorOverlay" class="overlay">
       <div class="row mt-5 justify-content-center">
-        <div class="col-6 errorBox text-center">
+        <div id="errorBox" class="col-6 errorBox text-center">
           <img src="./images/noLocationIcon.svg" alt="">
           <p class="errorMsg">whoops.</p>
-          <p class="tryAgainTxt">The city you searched cannot be found.</p>
-          <p class="tryAgainTxt">Please try another location.</p>
+          <p class="tryAgainTxt dayModeFontColor">The city you searched cannot be found.</p>
+          <p class="tryAgainTxt dayModeFontColor">Please try another location.</p>
           <div class="row mt-4 justify-content-center">
             <div class="col-5">
               <div class="d-grid gap-2">
-                <button class="btn searchAgainBtn" type="button">Try another search ></button>
+                <button id="searchAgainBtn" class="btn searchAgainBtn" type="button">Try another search ></button>
               </div>
             </div>
           </div>
