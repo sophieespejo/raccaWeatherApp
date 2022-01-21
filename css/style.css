@@ -30,9 +30,18 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.container-fluid.dark-mode{
+    background: url('../images/nightbg.png');
+}
+
 /* -----MENU BAR STYLING----- */
 .whiteBg{
     background-color: #ffffff;
+}
+
+.whiteBg.dark-mode{
+    background-color: #2F2F2F;
 }
 
 .titleTxt{
@@ -40,6 +49,14 @@
     font-size: 1.8rem;
     margin-bottom: 0 !important;
     color: #707070;
+    font-weight: bold;
+}
+
+.titleTxt.dark-mode{
+    font-family: 'Philosopher';
+    font-size: 1.8rem;
+    margin-bottom: 0 !important;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -58,7 +75,7 @@
 }
 
 .fas{
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
 }
 /* ----items in current weather box styling----- */
@@ -66,10 +83,23 @@
     border-radius: 15px;
 }
 
+.currentWeatherContainer.dark-mode{
+    border-radius: 15px;
+    background-color: #2F2F2F;
+}
+
 .locationTxt{
     font-family: 'Biryani-Light';
     font-size: 1.3rem;
     color: #454545;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+.locationTxt.dark-mode{
+    font-family: 'Biryani-Light';
+    font-size: 1.3rem;
+    color: #ffffff;
     letter-spacing: 3px;
     margin-bottom: 0px;
 }
@@ -95,6 +125,14 @@
     margin-bottom: 12px;
 }
 
+.currentTempTxt.dark-mode{
+    font-family: 'Philosopher';
+    font-size: 5.6rem;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
 .currentWeatherIcon{
     height: 80px;
     width: 80px;
@@ -108,13 +146,29 @@
     height:1px;
     width:90%;
     padding-top: 0px;
-  }
+}
 
-  .weatherDescTxt{
+.dayHr.dark-mode {
+    border:none;
+    border-top:2px dotted #989595;
+    color:#fff;
+    background-color:#2F2F2F;
+    height:1px;
+    width:90%;
+    padding-top: 0px;
+}
+
+.weatherDescTxt{
       font-family: 'Philosopher';
       font-size: 1.5rem;
       color: #454545;
-  }
+}
+
+.weatherDescTxt{
+    font-family: 'Philosopher';
+    font-size: 1.5rem;
+    color: #ffffff;
+}
 
   /* -----SECOND box styling */
   .timeTxt{
