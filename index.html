@@ -14,277 +14,260 @@
   <body>
     <div class="container-fluid">
       <!------MENU BAR-->
-      <div class="row whiteBg align-items-center">
+      <div class="row pb-2 pt-2 whiteBg align-items-center">
         <div class="col-3"></div>
         <div class="col-3 text-start">
           <p class="titleTxt">climate.xchange</p>
         </div>
-        <div class="col-1">
-
-        </div>
-        <div class="col-3">
-          <input type="email" class="form-control" placeholder="Search for a city">
-        </div>
-        <div class="col-1">
-          <button class="searchBtn"><i class="fas fa-search"></i></button>
+        <div class="col-3 d-flex">
+          <input type="email" id="citySearch" class="form-control" placeholder="Search for a city">
+          <button id="searchBtn" class="searchBtn"><i class="fas fa-search"></i></button>
         </div>
       </div>
-      <!-- <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-      </div>
-
-      <h2>Animated Sidenav Example</h2>
-        <p>Click on the element below to open the side navigation menu.</p>
-        <span style="font-size:30px;cursor:pointer" id="openBtn">&#9776; open</span>
- -->
- <div id="mySidenav" class="sidenav favesBox" style="width: 0px">
-    <div class="row">
-      <div class="col-12">
-        <div class="container">
+      <div id="mySidenav" class="sidenav favesBox" style="width: 0px">
           <div class="row">
-            <div class="col-10 p-0">
-              <p class="favesHeader">Your Favorite Cities</p>
-            </div>
-            <div class="col-2">
-              <button type="button" id="closeBtn" class="btn closeBtn p-0"><i class="far fa-times-circle"></i></button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
+            <div class="col-12">
+              <div class="container">
+                <div class="row">
+                  <div class="col-10 p-0">
+                    <p class="favesHeader">Your Favorite Cities</p>
                   </div>
                   <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                    <button type="button" id="closeBtn" class="btn closeBtn p-0"><i class="far fa-times-circle"></i></button>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 favoriteCityBox">
-                <div class="row justify-content-between faveBg">
-                  <div class="col-10">
-                    <button type="button" class ="btn nameSide">Stockton, California</button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
                   </div>
                 </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12 favoriteCityBox">
+                      <div class="row justify-content-between faveBg">
+                        <div class="col-10">
+                          <button type="button" class ="btn nameSide">Stockton, California</button>
+                        </div>
+                        <div class="col-2">
+                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </div> 
       </div>
-    </div> 
-</div>
       <!----END OF MENU BAR-->
       <div class="row justify-content-between mt-4">
         <!----favorites bar-->
@@ -334,51 +317,51 @@
                 <p class="timeTxt"><span>HH</span>:<span>MM</span><span> AM</span></p>
               </div>
             </div>
-           <div class="row justify-content-evenly"> 
-              <div class="col-4 d-flex text-center">
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <p class="hourlyTxt">8am</p>
+           <div class="row mt-3 hourRow justify-content-between"> 
+                <div class="col-4 d-flex text-center">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <p class="hourlyTxt">8am</p>
+                    </div>
+                    <div class="col-12">
+                      <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
+                    </div>
+                    <div class="col-12">
+                      <p class="hourlyTempTxt"><span>##</span>°</p>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
-                  </div>
-                  <div class="col-12">
-                    <p class="hourlyTempTxt"><span>##</span>°</p>
+                  <div class="offset-4 vertical_dotted_line">
                   </div>
                 </div>
-                <div class="col-1 vertical_dotted_line">
+                <div class="col-4 p-0 d-flex">
+                  <div class="row text-center">
+                    <div class="col-12">
+                      <p class="hourlyTxt">noon</p>
+                    </div>
+                    <div class="col-12">
+                      <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
+                    </div>
+                    <div class="col-12">
+                      <p class="hourlyTempTxt"><span>##</span>°</p>
+                    </div>
+                  </div>
+                  <div class="col-1 vertical_dotted_line offset-3">
+                  </div>
+                </div>
+                <div class="col-3 d-flex">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="hourlyTxt">8pm</p>
+                    </div>
+                    <div class="col-12">
+                      <img class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
+                    </div>
+                    <div class="col-12 mb-1">
+                      <p class="hourlyTempTxt"><span>##</span>°</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-4 d-flex">
-                <div class="row">
-                  <div class="col-12 text-start">
-                    <p class="hourlyTxt">noon</p>
-                  </div>
-                  <div class="col-12">
-                    <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
-                  </div>
-                  <div class="col-12">
-                    <p class="hourlyTempTxt"><span>##</span>°</p>
-                  </div>
-                </div>
-                <div class="col-1 vertical_dotted_line">
-                </div>
-              </div>
-              <div class="col-3 d-flex">
-                <div class="row">
-                  <div class="col-12">
-                    <p class="hourlyTxt">8pm</p>
-                  </div>
-                  <div class="col-12 pb-2">
-                    <img class="hourlyWeatherIconMoon img-fluid mx-auto mb-3" src="./images/icons/nightIcon.svg" alt="">
-                  </div>
-                  <div class="col-12 mb-1">
-                    <p class="hourlyTempTxt"><span>##</span>°</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <!---nothin----->
@@ -480,18 +463,18 @@
                         <p class="hourlyTempTxt"><span>##</span>°</p>
                       </div>
                     </div>
-                    <div class="col-1 offset-3 vertical_dotted_line">
+                    <div class="offset-4 vertical_dotted_line">
                     </div>
                   </div>
-                  <div class="col-4 d-flex">
+                  <div class="col-4 p-0 d-flex">
                     <div class="row">
-                      <div class="col-12 text-start">
+                      <div class="col-12 text-center">
                         <p class="hourlyTxt">noon</p>
                       </div>
-                      <div class="col-12">
+                      <div class="col-12 text-center">
                         <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
                       </div>
-                      <div class="col-12">
+                      <div class="col-12 text-center">
                         <p class="hourlyTempTxt"><span>##</span>°</p>
                       </div>
                     </div>
@@ -503,8 +486,8 @@
                       <div class="col-12">
                         <p class="hourlyTxt">8pm</p>
                       </div>
-                      <div class="col-12 pb-2">
-                        <img class="hourlyWeatherIconMoon mb-2" src="./images/icons/nightIcon.svg" alt="">
+                      <div class="col-12">
+                        <img class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
                       </div>
                       <div class="col-12 mb-1">
                         <p class="hourlyTempTxt"><span>##</span>°</p>

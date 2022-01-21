@@ -30,14 +30,14 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+/* -----MENU BAR STYLING----- */
 .whiteBg{
     background-color: #ffffff;
 }
 
 .titleTxt{
     font-family: 'Philosopher';
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0 !important;
     color: #707070;
     font-weight: bold;
@@ -61,7 +61,7 @@
     font-size: 20px;
     color: #ffffff;
 }
-
+/* ----items in current weather box styling----- */
 .currentWeatherContainer{
     border-radius: 15px;
 }
@@ -82,13 +82,10 @@
     font-size: 20px;
 }
 
-.yellow{
+/* .yellow{
     filter: invert(83%) sepia(33%) saturate(4145%) hue-rotate(359deg) brightness(102%) contrast(102%);
-}
+} */
 
-.currentWeatherIcon{
-    font-size: 10px;
-}
 
 .currentTempTxt{
     font-family: 'Philosopher';
@@ -119,7 +116,7 @@
       color: #454545;
   }
 
-  /* -----SECOND COLUMN */
+  /* -----SECOND box styling */
   .timeTxt{
     font-family: 'Biryani-Light';
     color: #454545;
@@ -136,7 +133,6 @@
   .hourlyWeatherIconMoon{
       height: 35px;
       width: 35px;
-      
       margin-top: 25%;
   }
 
@@ -239,7 +235,8 @@
 .favesBox{
     background-color:rgba(255, 255, 255, 0.845);
     padding-right: 2%;
-    overflow: hidden;
+    overflow: auto;
+    height: 90vh;
 }
 
 .nameSide{
@@ -269,23 +266,120 @@
     padding-right: 0px;
   }
   
-  /* .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
+@media screen and (max-width: 1200px){
+    /* ---menu bar styling */
+    .titleTxt{
+        font-size: 1.2rem;
+    }
+
+    .form-control{
+        font-size: 0.8rem;
+    }
+    
+    .searchBtn{
+        height: 30px;
+        width: 30px;
+    }
+
+    .fas{
+        font-size: 15px;
+    }
+
+    .locationTxt{
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .far{
+        font-size: 15px;
+    }
+
+    .currentWeatherIcon{
+        height: 50px;
+        width: 50px;
+    }
+
+    .currentTempTxt{
+        font-size: 4rem;
+        line-height: 0.75;
+        margin-bottom: 12px;
+    }
+
+    .weatherDescTxt{
+        font-size: 1rem;
+    }
+
+    /* today box styling */
+    .timeTxt{
+        font-size: 0.9rem;
+    }
+
+    .hourlyWeatherIcon{
+        height: 30px;
+        width: 30px;
+    }
   
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+    .hourlyWeatherIconMoon{
+        height: 30px;
+        width: 25px;
+        margin-top: 25%;
+    }
   
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  } */
+    .hourlyTxt{
+        font-size: 0.9rem;
+        margin-bottom: 0px;
+    }
+
+    .hourlyTempTxt{
+        font-size: 1.3rem;
+    }
+
+    /* ------forecast styling */
+    .forecastDate{
+        font-size: 0.8rem;
+        margin-bottom: 0px;
+    }
+
+    .fiveDayIcon{
+        height: 25px;
+        width: 25px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .highLowTxt{
+        font-size: 0.8rem;
+    }
+
+    .hourRow{
+        margin-top:2px !important;
+    }
+
+    .openFavesBtn{
+        font-size: 0.7rem;
+    }
+
+    .footerTxt{
+        font-size: 0.8rem;
+    }
+
+    .moreInfoTxt{
+        font-size: 1rem;
+        letter-spacing: 5px;
+    }
+
+    .forecastDesc{
+        font-size: 0.9rem;
+    }
+
+    .favesHeader{
+        font-size: 1rem;
+    }
+
+    .nameSide{
+        font-size: 0.9rem;
+    }
+    .fa-times{
+        font-size: 10px;
+    }
+}
