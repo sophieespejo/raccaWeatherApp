@@ -2,4 +2,23 @@ import { data, forecastData, fetchCurrentData, fetch5DayForecast, longitude, lat
 // fetchCurrentData();
 let location = 'stockton';
 
-fetchCurrentData(location);
+// fetchCurrentData(location);
+
+let openBtn = document.getElementById('openBtn');
+let closeBtn = document.getElementById('closeBtn');
+
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "200px";
+//   }
+  
+//   function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+//   }
+
+  openBtn.addEventListener('click', function(e){
+    document.getElementById("mySidenav").style.width = "350px";
+  })
+
+  closeBtn.addEventListener('click', function(e){
+    document.getElementById("mySidenav").style.width = "0px";
+  })
