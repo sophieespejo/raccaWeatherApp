@@ -23,6 +23,16 @@
     src: url("../fonts/Philosopher-Regular.ttf");
 }
 
+body{
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hide{
+    visibility: hidden;
+}
+
 .container-fluid{
     height: 100vh;
     width: 100vw;
@@ -239,7 +249,8 @@
 .favesBox{
     background-color:rgba(255, 255, 255, 0.845);
     padding-right: 2%;
-    overflow: hidden;
+    overflow: auto;
+    height: 90vh;
 }
 
 .nameSide{
@@ -248,6 +259,7 @@
 }
 .fa-times{
     color: #707070;
+    font-size: 13px;
 }
 
 .favoriteCityBox{
