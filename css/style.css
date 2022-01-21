@@ -115,7 +115,7 @@
 
   .weatherDescTxt{
       font-family: 'Philosopher';
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       color: #454545;
   }
 
@@ -134,9 +134,10 @@
   }
 
   .hourlyWeatherIconMoon{
-      height: 30px;
-      width: 30px;
-      margin-bottom: 0;
+      height: 35px;
+      width: 35px;
+      
+      margin-top: 25%;
   }
 
   .hourlyTxt{
@@ -144,3 +145,113 @@
       font-size: 1rem;
       margin-bottom: 0px;
   }
+
+  .vertical_dotted_line
+{
+  border-left: 2px dotted #c8c5c5;
+  height: 85%;
+}
+
+.hourlyTempTxt{
+    font-family: 'Philosopher';
+    font-size: 2rem;
+}
+
+/* ------forecast styling */
+.forecastDate{
+    font-family: 'Biryani-Light';
+    font-size: 1rem;
+}
+
+.fiveDayIcon{
+    height: 35px;
+    width: 35px;
+    padding: 0;
+}
+
+.highLowTxt{
+    font-family: 'Biryani-Light';
+    font-size: 1rem;
+}
+
+.forecastBox{
+    background-color: rgba(255, 255, 255, 0.284);
+    border-radius: 15px;
+}
+
+.openFavesBtn{
+    background-color: rgba(255, 255, 255, 0.736);
+    border-radius: 15px;
+    font-family: 'Biryani-Light';
+    color: #707070;
+    font-size: 0.9rem;
+}
+
+.footerTxt{
+    font-family: 'Biryani-Regular';
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.moreInfoBox{
+    background-color: rgba(255, 255, 255, 0.51);
+    border-radius: 15px;
+}
+
+.moreInfoTxt{
+    font-family: 'Biryani-Light';
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.forecastDots{
+    border:none;
+    border-top:2.8px dotted #989595;
+    /* color:#fff; */
+    background-color:rgba(255, 255, 255, 0.51);
+    height:1px;
+    width:90%;
+    padding-top: 0px;
+}
+
+.dotted-gradient {
+    background-image: linear-gradient(to right, #989595 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: top;
+    background-size: 4px 0.3px;
+    background-repeat: repeat-x;
+  }
+
+.forecastDesc{
+    font-family: 'Biryani-Light';
+    font-size: 1.3rem;
+}
+
+.favesHeader{
+    font-family: 'Biryani-Regular';
+    font-size: 1rem;
+    color: #707070;
+}
+
+.closeBtn{
+    text-decoration: none;
+}
+
+.favesBox{
+    background-color:rgba(255, 255, 255, 0.845);
+    padding-right: 2%;
+    overflow: hidden;
+}
+
+.nameSide{
+    font-family: 'Biryani-Bold';
+    font-size: 1.1rem;
+}
+.fa-times{
+    color: #707070;
+}
+
+.favoriteCityBox{
+    background-color:rgba(255, 255, 255, 0.969);
+    border-radius: 5px;
+    margin-bottom:3%;
+}
