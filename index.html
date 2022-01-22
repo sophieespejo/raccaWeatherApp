@@ -12,25 +12,25 @@
     <title>climate.xchange</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div id="wholePage" class="container-fluid">
       <!------MENU BAR-->
-      <div class="row pb-2 pt-2 whiteBg align-items-center">
+      <div class="row pb-2 pt-2 whiteBg align-items-center changeBlackToWhite">
         <div class="col-3"></div>
         <div class="col-3 text-start">
-          <p class="titleTxt dayModeFontColor">climate.xchange</p>
+          <p class="titleTxt dayModeFontColor changeFontColor">climate.xchange</p>
         </div>
         <div class="col-3 d-flex">
           <input type="email" id="citySearch" class="form-control" placeholder="Search for a city">
           <button id="searchBtn" class="searchBtn"><i class="fas fa-search"></i></button>
         </div>
       </div>
-      <div id="mySidenav" class="sidenav favesBox" style="width: 0px">
+      <div id="mySidenav" class="sidenav favesBox favesBoxDayMode" style="width: 0px">
           <div class="row">
             <div class="col-12">
               <div class="container" id="injectHere">
                 <div class="row">
                   <div class="col-10 p-0">
-                    <p class="favesHeader dayModeFontColor">Your Favorite Cities</p>
+                    <p class="favesHeader dayModeFontColor changeFontColor">Your Favorite Cities</p>
                   </div>
                   <div class="col-2">
                     <button type="button" id="closeBtn" class="btn closeBtn p-0"><i class="far fa-times-circle"></i></button>
@@ -47,10 +47,10 @@
         <div class="col-3"></div>
         <!-----current weather-->
         <div class="col-3 ">
-          <div class="container currentWeatherContainer whiteBg">
+          <div class="container currentWeatherContainer whiteBg changeBlackToWhite">
             <div class="row">
               <div class="col-10 mt-3">
-                <p id="selectedCity" class="locationTxt dayModeFontColor"></p>
+                <p id="selectedCity" class="locationTxt dayModeFontColor changeFontColor"></p>
               </div>
               <div class="col-2 mt-2 text-end">
                 <button id="faveBtn" type="button" class="btn faveBtn "><i id="heartIcon" class="far fa-heart"></i></button>
@@ -61,74 +61,74 @@
                 <img id="currentWeatherIcon" class="currentWeatherIcon" src="./images/icons/8AMicon.svg" alt="">
               </div>
               <div class="col-8">
-                <p class="currentTempTxt dayModeFontColor"><span id="currentTempTxt" class="currentTempTxt dayModeFontColor">54</span>°F</p>
+                <p class="currentTempTxt dayModeFontColor changeFontColor"><span id="currentTempTxt" >54</span>°F</p>
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="dayHr">
+              <div class="horizontalDots">
               </div>
             </div>
-            <div class="row justify-content-center mt-2">
+            <div class="row justify-content-center dotted-gradient  mt-2">
               <div class="col-4 text-start">
-                <p id="weatherDescTxt" class="weatherDescTxt dayModeFontColor">Desc</p>
+                <p id="weatherDescTxt" class="weatherDescTxt dayModeFontColor changeFontColor">Desc</p>
               </div>
               <div class="col-7 text-end">
-                <p class="weatherDescTxt dayModeFontColor">H:<span id="currentHighTempTxt"></span>°F L:<span id="currentLowTempTxt"></span>°F</p>
+                <p class="weatherDescTxt dayModeFontColor changeFontColor">H:<span id="currentHighTempTxt"></span>°F L:<span id="currentLowTempTxt"></span>°F</p>
               </div>
             </div>
           </div>
         </div>
         <div class="col-3 ">
-          <div class="container currentWeatherContainer whiteBg">
+          <div class="container currentWeatherContainer whiteBg changeBlackToWhite">
             <div class="row justify-content-between">
               <div class="col-2 mt-3 text-start">
-                <p class="locationTxt dayModeFontColor">TODAY</p>
+                <p class="locationTxt dayModeFontColor changeFontColor">TODAY</p>
               </div>
               <div class="col-6 mt-3 text-end">
-                <p class="timeTxt dayModeFontColor"><span id="currentHourTxt">HH</span>:<span id="currentMinuteTxt">MM</span><span id="AMPMTxt"></span></p>
+                <p class="timeTxt dayModeFontColor changeFontColor"><span id="currentHourTxt">HH</span>:<span id="currentMinuteTxt">MM</span><span id="AMPMTxt"></span></p>
               </div>
             </div>
            <div class="row mt-4 hourRow justify-content-between"> 
                 <div class="col-4 d-flex text-center">
                   <div class="row">
                     <div class="col-12 text-center">
-                      <p class="hourlyTxt dayModeFontColor">8am</p>
+                      <p class="hourlyTxt dayModeFontColor changeFontColor">8am</p>
                     </div>
                     <div class="col-12">
                       <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
                     </div>
                     <div class="col-12">
-                      <p class="hourlyTempTxt "><span id="morningTempTxt">##</span>°</p>
+                      <p class="hourlyTempTxt dayModeFontColor changeFontColor"><span id="morningTempTxt">##</span>°</p>
                     </div>
                   </div>
-                  <div class="offset-4 vertical_dotted_line">
+                  <div class="offset-4 dots vertical_dotted_line">
                   </div>
                 </div>
                 <div class="col-4 p-0 d-flex">
                   <div class="row text-center">
                     <div class="col-12">
-                      <p class="hourlyTxt ">noon</p>
+                      <p class="hourlyTxt dayModeFontColor changeFontColor">noon</p>
                     </div>
                     <div class="col-12">
                       <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
                     </div>
                     <div class="col-12">
-                      <p class="hourlyTempTxt"><span id="dayTempTxt">##</span>°</p>
+                      <p class="hourlyTempTxt dayModeFontColor changeFontColor"><span id="dayTempTxt">##</span>°</p>
                     </div>
                   </div>
-                  <div class="col-1 vertical_dotted_line offset-3">
+                  <div class="col-1 dot vertical_dotted_line offset-3">
                   </div>
                 </div>
                 <div class="col-3 d-flex">
                   <div class="row">
                     <div class="col-12">
-                      <p class="hourlyTxt">8pm</p>
+                      <p class="hourlyTxt dayModeFontColor changeFontColor">8pm</p>
                     </div>
                     <div class="col-12">
                       <img class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
                     </div>
                     <div class="col-12 mb-1">
-                      <p class="hourlyTempTxt"><span id="nightTempTxt">##</span>°</p>
+                      <p class="hourlyTempTxt dayModeFontColor changeFontColor"><span id="nightTempTxt">##</span>°</p>
                     </div>
                   </div>
                 </div>
@@ -146,10 +146,10 @@
         </div>
         <div class="col-6">
           <div class="row justify-content-around">
-              <div class="col-2 forecastBox p-0">
-                <button type="button" class="btn forecastBtn" value="0">
+              <div class="col-2 forecastBox forecastBoxDayColor p-0">
+                <button type="button" class="btn forecastBtn changeFontColor" value="0">
                   <div class="row text-center mt-2">
-                    <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                    <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
                   </div>
                   <div class="row justify-content-center">
                     <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
@@ -159,10 +159,10 @@
                   </div>
                 </button>
             </div>
-            <div class="col-2 forecastBox p-0">
-              <button type="button" class="btn forecastBtn" value="1">
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="1">
                 <div class="row text-center mt-2">
-                  <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
                 </div>
                 <div class="row justify-content-center">
                   <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
@@ -172,10 +172,10 @@
                 </div>
               </button>
             </div>
-            <div class="col-2 forecastBox p-0">
-              <button type="button" class="btn forecastBtn" value="2">
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="2">
                 <div class="row text-center mt-2">
-                  <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
                 </div>
                 <div class="row justify-content-center">
                   <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
@@ -185,10 +185,10 @@
                 </div>
               </button>
             </div>
-            <div class="col-2 forecastBox p-0">
-              <button type="button" class="btn forecastBtn" value="3">
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="3">
                 <div class="row text-center mt-2">
-                  <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
                 </div>
                 <div class="row justify-content-center">
                   <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
@@ -198,10 +198,10 @@
                 </div>
               </button>
             </div>
-            <div class="col-2 forecastBox p-0">
-              <button type="button" class="btn forecastBtn" value="4">
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="4">
                 <div class="row text-center mt-2">
-                  <p class="forecastDate"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
                 </div>
                 <div class="row justify-content-center">
                   <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
@@ -219,14 +219,14 @@
       </div>
       <!-- more details row -->
       <div class="row mt-3 justify-content-center">
-        <div id="moreInfoBox" class="col-6 moreInfoBox d-none">
+        <div id="moreInfoBox" class="col-6 moreInfoBox moreInfoDayMode d-none changeFontColor">
           <div class="container">
             <div class="row justify-content-between mt-4">
               <div class="col-6">
                 <div class="row">
                   <p id="whicheverDayClickedTxt" class="moreInfoTxt">WEDNESDAY</p>
                 </div>
-                <div class="row dotted-gradient">
+                <div class="row horizontalDots dotted-gradient">
                   <p id="weatherDescForWhicheverDayClicked" class="forecastDesc mt-3">Weather description</p>
                 </div>
               </div>
@@ -244,7 +244,7 @@
                         <p class="hourlyTempTxt"><span id="morningTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
-                    <div class="offset-4 vertical_dotted_line">
+                    <div class="offset-4 dots vertical_dotted_line">
                     </div>
                   </div>
                   <div class="col-4 p-0 d-flex">
@@ -259,7 +259,7 @@
                         <p class="hourlyTempTxt"><span id="noonTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
-                    <div class="col-1 vertical_dotted_line offset-3">
+                    <div class="col-1 dots vertical_dotted_line offset-3">
                     </div>
                   </div>
                   <div class="col-3 d-flex">
@@ -284,7 +284,7 @@
       <!-- favorite button row -->
       <div class="row mt-3 justify-content-center">
         <div class="col-3 d-grid gap-2">
-          <button type="button" class="btn openFavesBtn dayModeFontColor" id="openBtn"> ♥ Open your favorite places</button>
+          <button type="button" class="btn openFavesBtn dayModeFontColor openFavesBtnDayMode changeFontColor" id="openBtn"> ♥ Open your favorite places</button>
         </div>
       </div>
       <div class="row fixed-bottom text-center">
@@ -296,8 +296,8 @@
         <div id="errorBox" class="col-6 errorBox text-center">
           <img src="./images/noLocationIcon.svg" alt="">
           <p class="errorMsg">whoops.</p>
-          <p class="tryAgainTxt dayModeFontColor">The city you searched cannot be found.</p>
-          <p class="tryAgainTxt dayModeFontColor">Please try another location.</p>
+          <p class="tryAgainTxt dayModeFontColor changeFontColor">The city you searched cannot be found.</p>
+          <p class="tryAgainTxt dayModeFontColor changeFontColor">Please try another location.</p>
           <div class="row mt-4 justify-content-center">
             <div class="col-5">
               <div class="d-grid gap-2">

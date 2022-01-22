@@ -33,6 +33,10 @@
 
 .container-fluid.dark-mode{
     background: url('../images/nightbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* -----MENU BAR STYLING----- */
@@ -88,6 +92,12 @@
     color:#2F2F2F;
 }
 
+.fas.fa-heart.dark-mode{
+    color:#ffffff;
+}
+
+
+
 /* ----items in current weather box styling----- */
 .currentWeatherContainer{
     border-radius: 15px;
@@ -112,7 +122,6 @@
 .yellow{
     filter: invert(83%) sepia(33%) saturate(4145%) hue-rotate(359deg) brightness(102%) contrast(102%);
 }
-
 
 .currentTempTxt{
     font-family: 'Philosopher';
@@ -150,8 +159,6 @@
       font-family: 'Philosopher';
       font-size: 1.5rem;
 }
-
-
 
   /* -----SECOND box styling */
   .timeTxt{
@@ -215,27 +222,32 @@
 /* add darkmodefont color */
 
 .forecastBox{
-    background-color: rgba(255, 255, 255, 0.284);
     border-radius: 15px;
     display: flex;
     justify-content: center;
 }
 
+.forecastBoxDayColor{
+    background-color: rgba(255, 255, 255, 0.284);
+}
+
+.forecastBoxNightColor{
+    background-color: rgba(38, 35, 35, 0.571);
+}
+
 
 .openFavesBtn{
-    background-color: rgba(255, 255, 255, 0.736);
     border-radius: 15px;
     font-family: 'Biryani-Light';
-    color: #707070;
     font-size: 0.9rem;
+}
+.openFavesBtnDayMode{
+    background-color: rgba(255, 255, 255, 0.736);
 }
 
 .openFavesBtnDarkMode{
-    background-color: #2F2F2F;
-    border-radius: 15px;
-    font-family: 'Biryani-Light';
+    background-color: rgba(38, 35, 35, 0.571);
     color: #FFFFFF;
-    font-size: 0.9rem;
 }
 
 .footerTxt{
@@ -245,13 +257,15 @@
 }
 
 .moreInfoBox{
-    background-color: rgba(255, 255, 255, 0.51);
     border-radius: 15px;
 }
 
+.moreInfoDayMode{
+    background-color: rgba(255, 255, 255, 0.51);
+}
+
 .moreInfoBoxDarkMode{
-    background-color: #2E2E2E;
-    border-radius: 15px;
+    background-color: rgba(30, 27, 27, 0.667);
 }
  
 .moreInfoTxt{
@@ -277,7 +291,15 @@
     background-position: top;
     background-size: 4px 0.3px;
     background-repeat: repeat-x;
-  }
+}
+
+.dotted-gradient.dark-mode {
+    background-image: linear-gradient(to right, #f4f4f4 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: top;
+    background-size: 4px 0.3px;
+    background-repeat: repeat-x;
+}
+
 
 .forecastDesc{
     font-family: 'Biryani-Light';
@@ -298,10 +320,17 @@
 /* add darkmode font color */
 
 .favesBox{
-    background-color:rgba(255, 255, 255, 0.845);
     padding-right: 2%;
     overflow: auto;
     height: 90vh;
+}
+
+.favesBoxDayMode{
+    background-color:rgba(255, 255, 255, 0.845);
+}
+
+.favesBoxDarkMode{
+    background-color: rgba(24, 21, 21, 0.743);
 }
 
 /* add darkmodebg */

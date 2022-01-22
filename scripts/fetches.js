@@ -1,9 +1,13 @@
+ import {dOrNSearch} from "./darkMode.js";
+ 
  let forecastData, longitude, latitude, currentTime;
  let allForecastWeatherDesc = [];
  let dates = [];
  let allForecastMornTemps = [];
  let allForecastNoonTemps = [];
  let allForecastNightTemps = [];
+ let dayOrNight;
+ let allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon');
 
 
 export function fetchCurrentData(location)
@@ -41,7 +45,8 @@ export function getCurrentTxt(data){
     let hours = ((time.getHours() + 11) % 12 + 1);
     currentHourTxt.textContent = hours;
     currentMinuteTxt.textContent = time.getMinutes();
-    currentWeatherIcon.src = `/images/icons/svg/${data.weather[0].icon}.svg`;
+    dayOrNight = data.weather[0].icon;
+    currentWeatherIcon.src = `/images/icons/svg/${dayOrNight}.svg`;
     // currentWeatherIcon.src = "/images/icons/50d.png";
     // currentWeatherIcon.classList.add("yellow");
     console.log(data.weather[0].icon);
@@ -50,13 +55,13 @@ export function getCurrentTxt(data){
     latitude = data.coord.lat;
     longitude = data.coord.lon;
     fetch5DayForecast(latitude, longitude);
+    dOrNSearch(dayOrNight);
 }
 
 export function getForecastTxt(forecastData){
     let allForecastHighTempTxtArray = document.getElementsByClassName('allForecastHighTempTxt'),
     allForecaseLowTempTxtsArray = document.getElementsByClassName('allForecaseLowTempTxt'), allForecastDaysNamesArray = document.getElementsByClassName('forecastDaysArray'), allForecastMonthNumsArray = document.getElementsByClassName('forecastMonthNums'), allForecastDaysNumArray = document.getElementsByClassName('forecastDayNums');
 
-    let allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon');
     const days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
     let months =[];
     let dayNums = [];
@@ -88,10 +93,10 @@ export function getForecastTxt(forecastData){
     nightTempTxt.textContent = Math.round(forecastData.daily[0].temp.night);
 
 
-    return {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps};
+    return {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, allForecastWeatherIcons};
 }
 
 
-export {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps};
+export {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, dayOrNight, allForecastWeatherIcons};
 
 

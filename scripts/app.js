@@ -6,9 +6,9 @@ import {addFavoriteCityToList, removeFavoritesCityFromList} from "./components.j
 let selectedCity = document.getElementById('selectedCity'),
     currentWeatherIcon = document.getElementById('currentWeatherIcon'),
     currentTempTxt = document.getElementById('currentTempTxt'),
-    allHorizontalDots = document.getElementsByClassName('dayHr'),
-    allDayModeFontColor = document.getElementsByClassName('allDayModeFontColor'),
-    allWhiteBg = document.getElementsByClassName('whiteBg'),
+    // allHorizontalDots = document.getElementsByClassName('dayHr'),
+    // allDayModeFontColor = document.getElementsByClassName('allDayModeFontColor'),
+    // allWhiteBg = document.getElementsByClassName('whiteBg'),
     weatherDescTxt = document.getElementById('weatherDescTxt'),
     currentHighTempTxt = document.getElementById('currentHighTempTxt'),
     favesContainer = document.getElementById('favesContainer'),
@@ -17,11 +17,11 @@ let selectedCity = document.getElementById('selectedCity'),
     currentMinuteTxt = document.getElementById('currentMinuteTxt'),
     AMPMTxt = document.getElementById('AMPMTxt'),
     morningTempTxt = document.getElementById('morningTempTxt'),
-    allVerticalDots = document.getElementsByClassName('vertical_dotted_line'),
+    // allVerticalDots = document.getElementsByClassName('vertical_dotted_line'),
     dayTempTxt = document.getElementById('dayTempTxt'),
     nightTempTxt = document.getElementById('nightTempTxt'),
-    allForecastBoxes = document.getElementsByClassName('allForecastBoxes'),
-    allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon'),
+    // allForecastBoxes = document.getElementsByClassName('allForecastBoxes'),
+    // allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon'),
     moreInfoBox = document.getElementById('moreInfoBox'),
     whicheverDayClickedTxt = document.getElementById('whicheverDayClickedTxt'),
     faveBtn = document.getElementById('faveBtn'),
@@ -119,7 +119,7 @@ function getWeatherDescBasedOnDay(buttonValue)
 
 faveBtn.addEventListener('click', function(e){
   saveToLocalStorageByCityName(citySearch.value);
-  heartIcon.className = "fas fa-heart";
+  // heartIcon.className = "fas fa-heart";
   addFavoriteCityToList(citySearch.value);
   citySearch.value = "";
 })
