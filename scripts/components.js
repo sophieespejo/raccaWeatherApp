@@ -1,6 +1,8 @@
 //make function that will create the favorite city list
 
-let allFavorites = document.getElementsByClassName('faveRow');
+import { fetchCurrentData } from "./fetches.js";
+import { removeFromLocalStorage } from "./localStorage.js";
+let favoriteCities = [];
 
 function addFavoriteCityToList(cityName)
 {
@@ -22,6 +24,10 @@ function addFavoriteCityToList(cityName)
     nameBtn.className = "btn nameSide";
     nameBtn.type = "button";
     nameBtn.textContent = cityName;
+    nameBtn.value = cityName;
+    nameBtn.addEventListener('click', function(e){
+        fetchCurrentData(nameBtn.value)
+    })
     //append nameBtn to col10
     col10.appendChild(nameBtn);
     //create col-2
@@ -32,6 +38,13 @@ function addFavoriteCityToList(cityName)
     removeBtn.className = "btn removeBtn";
     removeBtn.type = "button";
     removeBtn.value = cityName;
+    removeBtn.addEventListener('click', function(e)
+    {
+        removeFromLocalStorage(removeBtn.value);
+        // debugger
+        this.parentNode.parentNode.parentNode.remove();
+    })
+    // removeBtn.onclick = "return this.parentNode.remove();"
     //create icon inside btn
     let timesIcon = document.createElement("i");
     timesIcon.className = "fas fa-times";
@@ -48,19 +61,36 @@ function addFavoriteCityToList(cityName)
     mainRow.appendChild(mainCol);
     //inject to dom
     injectHere.append(mainRow);
+    
+    favoriteCities.push(cityName);
 }
 
-function removeFavoritesCityFromList()
+// for(let i = 0; i<removeBtns.length; i++)
+// {
+// removeBtns[i].addEventListener('click', function(e){
+//     // console.log(removeBtns[i].value);
+//     // console.log(typeof(allFavorites));
+//     // console.log(allFavorites);
+//     // debugger;
+//     removeFromLocalStorage(removeBtns[i].value);
+//     // removeFavoritesCityFromList(removeBtns[i].value);
+// })
+// }
+
+function removeFavoritesCityFromList(buttonValue)
 {
-    // if(allFavorites.includes(cityName))
-    // {
-    //     let cityIndex = allFavorites.indexOf(cityName);
-    //     allFavorites[cityIndex].innerHTML = "";
-    // }
-    // else{
-    //     console.log("error");
-    // }
-    console.log("I'm supposed to be removed...")
+    // check if the value of the removeBtn is in the array of favoriteCities
+    if(favoriteCities.includes(buttonValue))
+    {
+        let cityIndex = favoriteCities.indexOf(buttonValue);
+        console.log('removed' + cityIndex);
+        injectHere.removeChild(injectHere.childNodes[cityIndex+3]);
+    }
+    else{
+        console.log("error")
+    }
+
+    // console.log(buttonValue);
 }
 
 

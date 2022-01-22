@@ -11,6 +11,7 @@ let selectedCity = document.getElementById('selectedCity'),
     allWhiteBg = document.getElementsByClassName('whiteBg'),
     weatherDescTxt = document.getElementById('weatherDescTxt'),
     currentHighTempTxt = document.getElementById('currentHighTempTxt'),
+    favesContainer = document.getElementById('favesContainer'),
     currentLowTempTxt = document.getElementById('currentLowTempTxt'),
     currentHourTxt = document.getElementById('currentHourTxt'),
     currentMinuteTxt = document.getElementById('currentMinuteTxt'),
@@ -24,7 +25,6 @@ let selectedCity = document.getElementById('selectedCity'),
     moreInfoBox = document.getElementById('moreInfoBox'),
     whicheverDayClickedTxt = document.getElementById('whicheverDayClickedTxt'),
     faveBtn = document.getElementById('faveBtn'),
-    removeBtns = document.getElementsByClassName('removeBtn'),
     weatherDescForWhicheverDayClicked = document.getElementById('weatherDescForWhicheverDayClicked'),
     morningWeatherIconForWhicheverDayClicked = document.getElementById('morningWeatherIconForWhicheverDayClicked'),
     morningTempTxtForWhicheverDayClicked = document.getElementById('morningTempTxtForWhicheverDayClicked'),
@@ -69,12 +69,7 @@ for(let i = 0; i<forecastBtns.length; i++)
   })
 }
 
-for(let i = 0; i<removeBtns.length; i++)
-{
-  removeBtns[i].addEventListener('click', function(e){
-    console.log("i was pressed");
-  })
-}
+
 
 function getWeatherDescBasedOnDay(buttonValue)
 {
@@ -126,4 +121,5 @@ faveBtn.addEventListener('click', function(e){
   saveToLocalStorageByCityName(citySearch.value);
   heartIcon.className = "fas fa-heart";
   addFavoriteCityToList(citySearch.value);
+  citySearch.value = "";
 })

@@ -35,6 +35,7 @@ function GetLocalStorage()
 function removeFromLocalStorage(cityName){
     //find index of city name in favorites array
     let cityIndex = favoriteCities.indexOf(cityName);
+    console.log("city index:"+ cityIndex);
     //found city name in array favorites
     favoriteCities.splice(cityIndex, 1);
     //updates local storage
@@ -43,4 +44,4 @@ function removeFromLocalStorage(cityName){
 
 
 
-export {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage}
+export {saveToLocalStorageByCityName, GetLocalStorage,  removeFromLocalStorage}
