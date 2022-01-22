@@ -41,10 +41,14 @@ export default function dOrNSearch (dayOrNight)
         moreInfoBox.classList.add("moreInfoDayMode");
         openBtn.classList.remove("openFavesBtnDarkMode");
         openBtn.classList.add("openFavesBtnDayMode");
-        Array.from(favesBox).forEach((favesBox) => {
-            favesBox.classList.remove("favesBoxDarkMode");
-            favesBox.classList.add("favesBoxDayMode");
-        })
+        // Array.from(favesBox).forEach((favesBox) => {
+        //     favesBox.classList.remove("favesBoxDarkMode");
+        //     favesBox.classList.add("favesBoxDayMode");
+        // })
+        // Array.from(faveRows).forEach((faveRow) => {
+        //     faveRow.classList.remove("faveCityBoxDarkMode");
+        //     faveRow.classList.add("faveCityBoxDayMode");
+        // })
     }
     else{
         wholePage.className = "container-fluid dark-mode";
@@ -74,10 +78,14 @@ export default function dOrNSearch (dayOrNight)
         moreInfoBox.classList.add("moreInfoBoxDarkMode");
         moreInfoBox.classList.remove("openFavesBtnDayMode");
         openBtn.classList.add("openFavesBtnDarkMode");
-        Array.from(favesBox).forEach((favesBox) => {
-            favesBox.classList.remove("favesBoxDayMode");
-            favesBox.classList.add("favesBoxDarkMode");
-        })
+        // Array.from(favesBox).forEach((favesBox) => {
+        //     favesBox.classList.remove("favesBoxDayMode");
+        //     favesBox.classList.add("favesBoxDarkMode");
+        // })
+        // Array.from(faveRows).forEach((faveRow) => {
+        //     faveRow.classList.remove("faveCityBoxDayMode");
+        //     faveRow.classList.add("faveCityBoxDarkMode");
+        // })
     }
 }
 

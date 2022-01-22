@@ -21,7 +21,7 @@ function addFavoriteCityToList(cityName)
     col10.className = "col-10";
     //create button inside col10
     let nameBtn = document.createElement("button");
-    nameBtn.className = "btn nameSide";
+    nameBtn.className = "btn nameSide changeFontColor";
     nameBtn.type = "button";
     nameBtn.textContent = cityName;
     nameBtn.value = cityName;
@@ -35,7 +35,7 @@ function addFavoriteCityToList(cityName)
     col2.className = "col-2";
     //create button inside col2
     let removeBtn = document.createElement("button");
-    removeBtn.className = "btn removeBtn";
+    removeBtn.className = "btn removeBtn changeFontColor";
     removeBtn.type = "button";
     removeBtn.value = cityName;
     removeBtn.addEventListener('click', function(e)
