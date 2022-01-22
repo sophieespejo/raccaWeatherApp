@@ -74,10 +74,15 @@
     border: none;
 }
 
-.fas{
+.fa-search{
     font-size: 18px;
     color: #ffffff;
 }
+
+.fas.fa-heart{
+    color:#2F2F2F;
+}
+
 /* ----items in current weather box styling----- */
 .currentWeatherContainer{
     border-radius: 15px;
@@ -95,7 +100,7 @@
 }
 
 .far{
-    font-size: 20px;
+    font-weight: 900;
 }
 
 /* .yellow{

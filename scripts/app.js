@@ -1,6 +1,7 @@
-import { data, forecastData, fetchCurrentData, fetch5DayForecast, longitude, latitude, currentTime, allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps} from "./fetches.js";
+import { fetchCurrentData, allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps} from "./fetches.js";
+import {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage} from "./localStorage.js";
+import {addFavoriteCityToList, removeFavoritesCityFromList} from "./components.js";
 
-// fetchCurrentData();
 
 let selectedCity = document.getElementById('selectedCity'),
     currentWeatherIcon = document.getElementById('currentWeatherIcon'),
@@ -22,6 +23,8 @@ let selectedCity = document.getElementById('selectedCity'),
     allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon'),
     moreInfoBox = document.getElementById('moreInfoBox'),
     whicheverDayClickedTxt = document.getElementById('whicheverDayClickedTxt'),
+    faveBtn = document.getElementById('faveBtn'),
+    removeBtns = document.getElementsByClassName('removeBtn'),
     weatherDescForWhicheverDayClicked = document.getElementById('weatherDescForWhicheverDayClicked'),
     morningWeatherIconForWhicheverDayClicked = document.getElementById('morningWeatherIconForWhicheverDayClicked'),
     morningTempTxtForWhicheverDayClicked = document.getElementById('morningTempTxtForWhicheverDayClicked'),
@@ -33,7 +36,8 @@ let selectedCity = document.getElementById('selectedCity'),
     errorBox = document.getElementById('errorBox'),
     searchAgainBtn = document.getElementById('searchAgainBtn'),
     forecastBtns = document.getElementsByClassName('forecastBtn'),
-    dates1 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    dates1 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    heartIcon = document.getElementById('heartIcon');
 
 
 
@@ -53,6 +57,7 @@ let openBtn = document.getElementById('openBtn'),
   })
 
   searchBtn.addEventListener('click',  function(e){
+      heartIcon.className = "far fa-heart";
       fetchCurrentData(citySearch.value);
   })
 
@@ -61,6 +66,13 @@ for(let i = 0; i<forecastBtns.length; i++)
   forecastBtns[i].addEventListener('click', function(e){
     getWeatherDescBasedOnDay(this.value);
 
+  })
+}
+
+for(let i = 0; i<removeBtns.length; i++)
+{
+  removeBtns[i].addEventListener('click', function(e){
+    console.log("i was pressed");
   })
 }
 
@@ -109,3 +121,9 @@ function getWeatherDescBasedOnDay(buttonValue)
   }
 
 }
+
+faveBtn.addEventListener('click', function(e){
+  saveToLocalStorageByCityName(citySearch.value);
+  heartIcon.className = "fas fa-heart";
+  addFavoriteCityToList(citySearch.value);
+})

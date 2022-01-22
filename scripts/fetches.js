@@ -1,4 +1,4 @@
-export let data, forecastData, longitude, latitude, cityName, currentTime;
+ let forecastData, longitude, latitude, currentTime;
  let allForecastWeatherDesc = [];
  let dates = [];
  let allForecastMornTemps = [];
@@ -12,7 +12,6 @@ export function fetchCurrentData(location)
         response => response.json()
     ).then(
         data => {
-            // console.log(data);
             getCurrentTxt(data);
         }
     )
@@ -25,7 +24,6 @@ export function fetch5DayForecast(latitude, longitude){
     ).then(
         data => {
             forecastData = data;
-            // console.log(forecastData);
             getForecastTxt(forecastData);
         }
     )
@@ -86,7 +84,6 @@ export function getForecastTxt(forecastData){
     nightTempTxt.textContent = Math.round(forecastData.daily[0].temp.night);
 
 
-    console.log(allForecastNightTemps);
     return {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps};
 }
 
