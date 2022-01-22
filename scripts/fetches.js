@@ -13,6 +13,7 @@ export function fetchCurrentData(location)
     ).then(
         data => {
             getCurrentTxt(data);
+            console.log(data);
         }
     )
 }
@@ -40,8 +41,11 @@ export function getCurrentTxt(data){
     let hours = ((time.getHours() + 11) % 12 + 1);
     currentHourTxt.textContent = hours;
     currentMinuteTxt.textContent = time.getMinutes();
-
-    var suffix = hours >= 12 ? "AM":"PM"; 
+    currentWeatherIcon.src = `/images/icons/svg/${data.weather[0].icon}.svg`;
+    // currentWeatherIcon.src = "/images/icons/50d.png";
+    // currentWeatherIcon.classList.add("yellow");
+    console.log(data.weather[0].icon);
+    var suffix = hours >= 12 ? "PM":"AM"; 
     AMPMTxt.textContent = suffix;
     latitude = data.coord.lat;
     longitude = data.coord.lon;
@@ -77,7 +81,7 @@ export function getForecastTxt(forecastData){
         allForecastDaysNamesArray[i].textContent = days[(dates[i])];
         allForecastMonthNumsArray[i].textContent = months[i]+1;
         allForecastDaysNumArray[i].textContent = dayNums[i];
-        allForecastWeatherIcons[i].src = `/images/icons/${iconsArr[i]}.png`;
+        allForecastWeatherIcons[i].src = `/images/icons/png/${iconsArr[i]}.png`;
     }
     morningTempTxt.textContent = Math.round(forecastData.daily[0].temp.morn);
     dayTempTxt.textContent = Math.round(forecastData.daily[0].temp.day);
