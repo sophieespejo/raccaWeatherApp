@@ -2,6 +2,7 @@
 
 import { fetchCurrentData } from "./fetches.js";
 import { removeFromLocalStorage } from "./localStorage.js";
+import {dayTime} from "./darkMode.js";
 let favoriteCities = [];
 
 function addFavoriteCityToList(cityName)
@@ -12,7 +13,13 @@ function addFavoriteCityToList(cityName)
     mainRow.id = cityName;
     //create col within row
     let mainCol = document.createElement("div");
-    mainCol.className = "col-12 favoriteCityBox";
+    if(dayTime)
+    {
+        mainCol.className = "col-12 favoriteCityBox favoriteCityBoxDayMode";
+    }
+    else{
+        mainCol.className = "col-12 favoriteCityBox favoritesCityBoxDarkMode";
+    }
     //create row that's in col
     let rowBg = document.createElement("div");
     rowBg.className = "row justify-content-between faveBg";
@@ -21,7 +28,13 @@ function addFavoriteCityToList(cityName)
     col10.className = "col-10";
     //create button inside col10
     let nameBtn = document.createElement("button");
-    nameBtn.className = "btn nameSide changeFontColor";
+    if(dayTime)
+    {
+        nameBtn.className = "btn nameSide dayModeFontColor";
+    }
+    else{
+        nameBtn.className = "btn nameSide darkModeFontColor";
+    }
     nameBtn.type = "button";
     nameBtn.textContent = cityName;
     nameBtn.value = cityName;
@@ -35,6 +48,13 @@ function addFavoriteCityToList(cityName)
     col2.className = "col-2";
     //create button inside col2
     let removeBtn = document.createElement("button");
+    if(dayTime)
+    {
+        removeBtn.className = "btn removeBtn dayModeFontColor";
+    }
+    else{
+        removeBtn.className = "btn removeBtn darkModeFontColor";
+    }
     removeBtn.className = "btn removeBtn changeFontColor";
     removeBtn.type = "button";
     removeBtn.value = cityName;

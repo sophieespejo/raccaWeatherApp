@@ -29,6 +29,7 @@ export function fetch5DayForecast(latitude, longitude){
     ).then(
         data => {
             forecastData = data;
+            console.log(forecastData);
             getForecastTxt(forecastData);
         }
     )
@@ -61,7 +62,6 @@ export function getCurrentTxt(data){
 export function getForecastTxt(forecastData){
     let allForecastHighTempTxtArray = document.getElementsByClassName('allForecastHighTempTxt'),
     allForecaseLowTempTxtsArray = document.getElementsByClassName('allForecaseLowTempTxt'), allForecastDaysNamesArray = document.getElementsByClassName('forecastDaysArray'), allForecastMonthNumsArray = document.getElementsByClassName('forecastMonthNums'), allForecastDaysNumArray = document.getElementsByClassName('forecastDayNums');
-
     const days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
     let months =[];
     let dayNums = [];

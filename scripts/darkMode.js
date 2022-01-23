@@ -9,12 +9,17 @@ let wholePage = document.getElementById('wholePage'),
     // allHorizontalDots = document.getElementsByClassName('horizontalDots'),
     allForecastBoxes = document.getElementsByClassName('forecastBox'),
     moreInfoBox = document.getElementById('moreInfoBox'),
-    favesBox = document.getElementsByClassName('favesBox');
+    faveCityBox = document.getElementsByClassName('favoriteCityBox'),
+    mySidenav = document.getElementById("mySidenav"),
+    allRemoveBtns = document.getElementsByClassName("removeBtn"),
+    allNameBtns = document.getElementsByClassName("nameSide"),
+    dayTime = true;
 
-export default function dOrNSearch (dayOrNight)
+function dOrNSearch (dayOrNight)
 {
     if(dayOrNight.includes("d"))
     {
+        dayTime = true;
         wholePage.className = "container-fluid";
         Array.from(allForecastWeatherIcons).forEach((icon) => {
             icon.className = "fiveDayIcon"
@@ -30,9 +35,9 @@ export default function dOrNSearch (dayOrNight)
         faveBtn.addEventListener('click', function(e){
             heartIcon.className = "fas fa-heart";
         })
-        // Array.from(allHorizontalDots).forEach((horizontalDot) => {
-        //     horizontalDot.classList.remove("dark-mode");
-        // })
+        Array.from(allNameBtns).forEach((nameBtn) => {
+            nameBtn.className = "btn nameSide dayModeFontColor";
+        })
         Array.from(allForecastBoxes).forEach((forecastBox) => {
             forecastBox.classList.remove("forecastBoxNightColor");
             forecastBox.classList.add("forecastBoxDayColor");
@@ -41,16 +46,13 @@ export default function dOrNSearch (dayOrNight)
         moreInfoBox.classList.add("moreInfoDayMode");
         openBtn.classList.remove("openFavesBtnDarkMode");
         openBtn.classList.add("openFavesBtnDayMode");
-        // Array.from(favesBox).forEach((favesBox) => {
-        //     favesBox.classList.remove("favesBoxDarkMode");
-        //     favesBox.classList.add("favesBoxDayMode");
-        // })
-        // Array.from(faveRows).forEach((faveRow) => {
-        //     faveRow.classList.remove("faveCityBoxDarkMode");
-        //     faveRow.classList.add("faveCityBoxDayMode");
-        // })
+        Array.from(faveCityBox).forEach((favesBox) => {
+            favesBox.className = "col-12 favoriteCityBox favoriteCityBoxDayMode"
+        })
+        mySidenav.className = "sidenav favesBox favesBoxDayMode";
     }
     else{
+        dayTime = false;
         wholePage.className = "container-fluid dark-mode";
         Array.from(allForecastWeatherIcons).forEach((icon) => {
             icon.className = "fiveDayIcon whiteIcons"
@@ -67,9 +69,9 @@ export default function dOrNSearch (dayOrNight)
         faveBtn.addEventListener('click', function(e){
             heartIcon.className = "fas fa-heart dark-mode";
         })
-        // Array.from(allHorizontalDots).forEach((horizontalDot) => {
-        //     horizontalDot.classList.add("dark-mode");
-        // })
+        Array.from(allNameBtns).forEach((nameBtn) => {
+            nameBtn.className = "btn nameSide darkModeFontColor";
+        })
         Array.from(allForecastBoxes).forEach((forecastBox) => {
             forecastBox.classList.remove("forecastBoxDayColor");
             forecastBox.classList.add("forecastBoxNightColor");
@@ -78,15 +80,12 @@ export default function dOrNSearch (dayOrNight)
         moreInfoBox.classList.add("moreInfoBoxDarkMode");
         moreInfoBox.classList.remove("openFavesBtnDayMode");
         openBtn.classList.add("openFavesBtnDarkMode");
-        // Array.from(favesBox).forEach((favesBox) => {
-        //     favesBox.classList.remove("favesBoxDayMode");
-        //     favesBox.classList.add("favesBoxDarkMode");
-        // })
-        // Array.from(faveRows).forEach((faveRow) => {
-        //     faveRow.classList.remove("faveCityBoxDayMode");
-        //     faveRow.classList.add("faveCityBoxDarkMode");
-        // })
+        Array.from(faveCityBox).forEach((favesBox) => {
+            favesBox.className = "col-12 favoriteCityBox favoritesCityBoxDarkMode"
+        })
+        mySidenav.className = "sidenav favesBox favesBoxDarkMode";
     }
+    return dayTime;
 }
 
-export {dOrNSearch}
+export {dOrNSearch, dayTime}

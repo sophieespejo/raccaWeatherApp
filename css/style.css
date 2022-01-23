@@ -46,7 +46,6 @@
 
 .whiteColRow{
     height: 20vh;
-    margin-bottom: 5%;
 }
 
 .dayModeFontColor{
@@ -54,7 +53,7 @@
 }
 
 .darkModeFontColor{
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .darkModeBlackBg{
@@ -347,15 +346,18 @@
 
 /* add dark mode fc */
 
-.favoriteCityBox{
+.favoriteCityBoxDayMode{
     background-color:rgba(255, 255, 255, 0.969);
     border-radius: 5px;
     margin-bottom:3%;
 }
 
+.btn:hover{
+    text-decoration: none;
+}
 
 .favoritesCityBoxDarkMode{
-    background-color:rgba(30, 28, 28, 0.133);
+    background-color:rgba(0, 0, 0, 0.695);
     border-radius: 5px;
     margin-bottom:3%;
 }
