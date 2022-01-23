@@ -12,14 +12,15 @@
     <title>climate.xchange</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div id="wholePage" class="container-fluid">
       <!------MENU BAR-->
-      <div class="row whiteBg align-items-center">
+      <div class="row pb-2 pt-2 whiteBg align-items-center changeBlackToWhite">
         <div class="col-3"></div>
         <div class="col-3 text-start">
-          <p class="titleTxt">climate.xchange</p>
+          <p class="titleTxt dayModeFontColor changeFontColor">climate.xchange</p>
         </div>
         <div class="col-3 d-flex">
+<<<<<<< HEAD
           <input type="email" class="form-control" placeholder="Search for a city">
           <button class="searchBtn"><i class="fas fa-search"></i></button>
         </div>
@@ -28,190 +29,33 @@
       <div class="row justify-content-between mt-4">
         <!----favorites bar-->
         <div class="col-3 ">
+=======
+          <input type="email" id="citySearch" class="form-control" placeholder="Search for a city">
+          <button id="searchBtn" class="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div id="mySidenav" class="sidenav favesBox favesBoxDayMode" style="width: 0px">
+>>>>>>> f88cb54ae46dda60f330c9551f8ed50c751be6ee
           <div class="row">
-            <div class="col-11 favesBox">
-              <div class="container">
-                <div class="row mt-3">
+            <div class="col-12">
+              <div class="container" id="injectHere">
+                <div class="row">
                   <div class="col-10 p-0">
-                    <p class="favesHeader">Your Favorite Cities</p>
+                    <p class="favesHeader dayModeFontColor changeFontColor">YOUR FAVORITE CITIES</p>
                   </div>
                   <div class="col-2">
-                    <button type="button" class="btn closeBtn p-0"><i class="far fa-times-circle"></i></button>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-12 favoriteCityBox">
-                      <div class="row justify-content-between faveBg">
-                        <div class="col-10">
-                          <button type="button" class ="btn nameSide">Stockton, California</button>
-                        </div>
-                        <div class="col-2">
-                          <button class="btn removeBtn"><i class="fas fa-times"></i></button>
-                        </div>
-                      </div>
+                    <button type="button" id="closeBtn" class="btn closeBtn p-0"><i class="far fa-times-circle changeFontColor dayModeFontColor"></i></button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div> 
+      </div>
+      <!----END OF MENU BAR-->
+      <div class="row justify-content-between mt-4 whiteColRow">
+        <!----favorites bar-->
         <!-- <div class="col-1"></div> -->
+<<<<<<< HEAD
         <div class="col-9">
           <div class="row">
             <!-----current weather-->
@@ -255,6 +99,192 @@
                   <div class="col-6 mt-3 text-end">
                     <p class="timeTxt"><span>HH</span>:<span>MM</span><span> AM</span></p>
                   </div>
+=======
+        <div class="col-3"></div>
+        <!-----current weather-->
+        <div class="col-3 ">
+          <div class="container currentWeatherContainer whiteBg changeBlackToWhite">
+            <div class="row">
+              <div class="col-10 mt-3">
+                <p id="selectedCity" class="locationTxt dayModeFontColor changeFontColor"></p>
+              </div>
+              <div class="col-2 mt-2 text-end">
+                <button id="faveBtn" type="button" class="btn faveBtn "><i id="heartIcon" class="far fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="row justify-content-around">
+              <div class="col-3">
+                <img id="currentWeatherIcon" class="currentWeatherIcon" src="./images/icons/8AMicon.svg" alt="">
+              </div>
+              <div class="col-8">
+                <p class="currentTempTxt dayModeFontColor changeFontColor"><span id="currentTempTxt" >54</span>°F</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="horizontalDots">
+              </div>
+            </div>
+            <div class="row justify-content-center dotted-gradient  mt-2">
+              <div class="col-4 text-start">
+                <p id="weatherDescTxt" class="weatherDescTxt dayModeFontColor changeFontColor">Desc</p>
+              </div>
+              <div class="col-7 text-end">
+                <p class="weatherDescTxt dayModeFontColor changeFontColor">H:<span id="currentHighTempTxt"></span>°F L:<span id="currentLowTempTxt"></span>°F</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 ">
+          <div class="container currentWeatherContainer whiteBg changeBlackToWhite">
+            <div class="row justify-content-between">
+              <div class="col-2 mt-3 text-start">
+                <p class="locationTxt dayModeFontColor changeFontColor">TODAY</p>
+              </div>
+              <div class="col-6 mt-3 text-end">
+                <p class="timeTxt dayModeFontColor changeFontColor"><span id="currentHourTxt">HH</span>:<span id="currentMinuteTxt">MM</span><span id="AMPMTxt"></span></p>
+              </div>
+            </div>
+           <div class="row mt-4 hourRow justify-content-between"> 
+                <div class="col-4 d-flex text-center">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <p class="hourlyTxt dayModeFontColor changeFontColor">8am</p>
+                    </div>
+                    <div class="col-12">
+                      <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
+                    </div>
+                    <div class="col-12">
+                      <p class="hourlyTempTxt dayModeFontColor changeFontColor"><span id="morningTempTxt">##</span>°</p>
+                    </div>
+                  </div>
+                  <div class="offset-4 dots vertical_dotted_line">
+                  </div>
+                </div>
+                <div class="col-4 p-0 d-flex">
+                  <div class="row text-center">
+                    <div class="col-12">
+                      <p class="hourlyTxt dayModeFontColor changeFontColor">noon</p>
+                    </div>
+                    <div class="col-12">
+                      <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
+                    </div>
+                    <div class="col-12">
+                      <p class="hourlyTempTxt dayModeFontColor changeFontColor"><span id="dayTempTxt">##</span>°</p>
+                    </div>
+                  </div>
+                  <div class="col-1 dot vertical_dotted_line offset-3">
+                  </div>
+                </div>
+                <div class="col-3 d-flex">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="hourlyTxt dayModeFontColor changeFontColor">8pm</p>
+                    </div>
+                    <div class="col-12">
+                      <img class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
+                    </div>
+                    <div class="col-12 mb-1">
+                      <p class="hourlyTempTxt dayModeFontColor changeFontColor"><span id="nightTempTxt">##</span>°</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!---nothin----->
+        <div class="col-3"></div>
+      </div> 
+      <!-- end of currentWeather row -->
+      <!-- forecast row -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-2">
+
+        </div>
+        <div class="col-6">
+          <div class="row justify-content-around">
+              <div class="col-2 forecastBox forecastBoxDayColor p-0">
+                <button type="button" class="btn forecastBtn changeFontColor" value="0">
+                  <div class="row text-center mt-2">
+                    <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                  </div>
+                  <div class="row justify-content-center">
+                    <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
+                  </div>
+                  <div class="row text-center mt-2">
+                    <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
+                  </div>
+                </button>
+            </div>
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="1">
+                <div class="row text-center mt-2">
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                </div>
+                <div class="row justify-content-center">
+                  <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
+                </div>
+                <div class="row text-center mt-2">
+                  <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
+                </div>
+              </button>
+            </div>
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="2">
+                <div class="row text-center mt-2">
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                </div>
+                <div class="row justify-content-center">
+                  <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
+                </div>
+                <div class="row text-center mt-2">
+                  <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
+                </div>
+              </button>
+            </div>
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="3">
+                <div class="row text-center mt-2">
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                </div>
+                <div class="row justify-content-center">
+                  <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
+                </div>
+                <div class="row text-center mt-2">
+                  <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
+                </div>
+              </button>
+            </div>
+            <div class="col-2 forecastBox forecastBoxDayColor p-0">
+              <button type="button" class="btn forecastBtn changeFontColor" value="4">
+                <div class="row text-center mt-2">
+                  <p class="forecastDate changeFontColor dayModeFontColor"><span class="forecastDaysArray">Wed</span> <span class="forecastMonthNums">12</span>/<span class="forecastDayNums">8</span></p>
+                </div>
+                <div class="row justify-content-center">
+                  <img class="fiveDayIcon" src="./images/icons/png/09d.png" alt="">
+                </div>
+                <div class="row text-center mt-2">
+                  <p class="highLowTxt"><span class="allForecastHighTempTxt">74</span>°F I <span class="allForecaseLowTempTxt">34</span>°F</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+      <!-- more details row -->
+      <div class="row mt-3 justify-content-center">
+        <div id="moreInfoBox" class="col-6 moreInfoBox moreInfoDayMode d-none changeFontColor">
+          <div class="container">
+            <div class="row justify-content-between mt-4">
+              <div class="col-6">
+                <div class="row">
+                  <p id="whicheverDayClickedTxt" class="moreInfoTxt">WEDNESDAY</p>
+                </div>
+                <div class="row horizontalDots dotted-gradient">
+                  <p id="weatherDescForWhicheverDayClicked" class="forecastDesc mt-3">Weather description</p>
+>>>>>>> f88cb54ae46dda60f330c9551f8ed50c751be6ee
                 </div>
                 <div class="row justify-content-evenly"> 
                   <div class="col-4 d-flex text-center">
@@ -263,38 +293,53 @@
                         <p class="hourlyTxt">8am</p>
                       </div>
                       <div class="col-12">
-                        <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
+                        <img id="morningWeatherIconForWhicheverDayClicked" class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/8AMicon.svg" alt="">
                       </div>
                       <div class="col-12">
-                        <p class="hourlyTempTxt"><span>##</span>°</p>
+                        <p class="hourlyTempTxt"><span id="morningTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <div class="col-1 vertical_dotted_line"></div>
+=======
+                    <div class="offset-4 dots vertical_dotted_line">
+                    </div>
+>>>>>>> f88cb54ae46dda60f330c9551f8ed50c751be6ee
                   </div>
-                  <div class="col-4 d-flex">
+                  <div class="col-4 p-0 d-flex">
                     <div class="row">
-                      <div class="col-12 text-start">
+                      <div class="col-12 text-center">
                         <p class="hourlyTxt">noon</p>
                       </div>
-                      <div class="col-12">
-                        <img class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
+                      <div class="col-12 text-center">
+                        <img id="noonWeatherIconForWhicheverDayClicked" class="hourlyWeatherIcon img-fluid mx-auto" src="./images/icons/noonIcon.svg" alt="">
                       </div>
-                      <div class="col-12">
-                        <p class="hourlyTempTxt"><span>##</span>°</p>
+                      <div class="col-12 text-center">
+                        <p class="hourlyTempTxt"><span id="noonTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <div class="col-1 vertical_dotted_line"></div>
+=======
+                    <div class="col-1 dots vertical_dotted_line offset-3">
+                    </div>
+>>>>>>> f88cb54ae46dda60f330c9551f8ed50c751be6ee
                   </div>
                   <div class="col-3 d-flex">
                     <div class="row">
                       <div class="col-12">
                         <p class="hourlyTxt">8pm</p>
                       </div>
+<<<<<<< HEAD
                       <div class="col-12 pb-2">
                         <img class="hourlyWeatherIconMoon img-fluid mx-auto mb-3" src="./images/icons/nightIcon.svg" alt="">
+=======
+                      <div class="col-12">
+                        <img id="nightWeatherIconForWhicheverDayClicked" class="hourlyWeatherIconMoon mb-1" src="./images/icons/nightIcon.svg" alt="">
+>>>>>>> f88cb54ae46dda60f330c9551f8ed50c751be6ee
                       </div>
                       <div class="col-12 mb-1">
-                        <p class="hourlyTempTxt"><span>##</span>°</p>
+                        <p class="hourlyTempTxt"><span id="nightTempTxtForWhicheverDayClicked">##</span>°</p>
                       </div>
                     </div>
                   </div>
@@ -442,11 +487,38 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div> 
+=======
+      </div>
+      <!-- favorite button row -->
+      <div class="row mt-3 justify-content-center">
+        <div class="col-3 d-grid gap-2">
+          <button type="button" class="btn openFavesBtn dayModeFontColor openFavesBtnDayMode changeFontColor" id="openBtn"> ♥ Open your favorite places</button>
+        </div>
+      </div>
+>>>>>>> f88cb54ae46dda60f330c9551f8ed50c751be6ee
       <div class="row fixed-bottom text-center">
         <p class="footerTxt">handcrafted by Joseph Racca</p>
       </div>
     </div><!----end of container fluid-->
+    <div id="errorOverlay" class="overlay">
+      <div class="row mt-5 justify-content-center">
+        <div id="errorBox" class="col-6 errorBox text-center">
+          <img src="./images/noLocationIcon.svg" alt="">
+          <p class="errorMsg">whoops.</p>
+          <p class="tryAgainTxt dayModeFontColor changeFontColor">The city you searched cannot be found.</p>
+          <p class="tryAgainTxt dayModeFontColor changeFontColor">Please try another location.</p>
+          <div class="row mt-4 justify-content-center">
+            <div class="col-5">
+              <div class="d-grid gap-2">
+                <button id="searchAgainBtn" class="btn searchAgainBtn" type="button">Try another search ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
     <!-- Optional JavaScript; choose one of the two! -->
