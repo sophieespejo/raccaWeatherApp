@@ -1,6 +1,6 @@
 //checks to see if user is located in day or night
 //searches current fecth data and checks if icon includes "d" or "n"
-import {allForecastWeatherIcons } from "./fetches.js";
+import {allForecastWeatherIcons } from "./displayData.js";
 
 
 let wholePage = document.getElementById('wholePage'), 

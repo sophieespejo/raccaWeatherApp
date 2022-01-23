@@ -1,6 +1,8 @@
-import { fetchCurrentData, allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps} from "./fetches.js";
+import { fetchCurrentData} from "./fetches.js";
 import {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage} from "./localStorage.js";
 import {addFavoriteCityToList, removeFavoritesCityFromList} from "./components.js";
+import {success, error, options, currentLat, currentLon} from "./geolocation.js";
+import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, allForecastWeatherIcons} from "./displayData.js"
 
 
 let selectedCity = document.getElementById('selectedCity'),
@@ -14,8 +16,6 @@ let selectedCity = document.getElementById('selectedCity'),
     favesContainer = document.getElementById('favesContainer'),
     currentLowTempTxt = document.getElementById('currentLowTempTxt'),
     currentHourTxt = document.getElementById('currentHourTxt'),
-    currentMinuteTxt = document.getElementById('currentMinuteTxt'),
-    AMPMTxt = document.getElementById('AMPMTxt'),
     morningTempTxt = document.getElementById('morningTempTxt'),
     // allVerticalDots = document.getElementsByClassName('vertical_dotted_line'),
     dayTempTxt = document.getElementById('dayTempTxt'),
@@ -41,7 +41,6 @@ let selectedCity = document.getElementById('selectedCity'),
 
 
 
-// fetchCurrentData(location);
 
 let openBtn = document.getElementById('openBtn'),
     closeBtn = document.getElementById('closeBtn'),

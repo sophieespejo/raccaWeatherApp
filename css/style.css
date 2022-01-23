@@ -135,23 +135,8 @@
 }
 
 .dayHr {
-    border:none;
     border-top:2px dotted #989595;
-    color:#fff;
-    background-color:#fff;
-    height:1px;
     width:90%;
-    padding-top: 0px;
-}
-
-.dayHr.dark-mode {
-    border:none;
-    border-top:2px dotted #989595;
-    color:#fff;
-    background-color:#2F2F2F;
-    height:1px;
-    width:90%;
-    padding-top: 0px;
 }
 
 .weatherDescTxt{
