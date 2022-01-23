@@ -118,9 +118,9 @@
     font-weight: 900;
 }
 
-.yellow{
+/* .yellow{
     filter: invert(83%) sepia(33%) saturate(4145%) hue-rotate(359deg) brightness(102%) contrast(102%);
-}
+} */
 
 .currentTempTxt{
     font-family: 'Philosopher';
