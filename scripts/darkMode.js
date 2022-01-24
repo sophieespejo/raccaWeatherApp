@@ -6,13 +6,10 @@ import {allForecastWeatherIcons, errorOverlay } from "./displayData.js";
 
 let wholePage = document.getElementById('wholePage'), 
     changeFontColor = document.getElementsByClassName('changeFontColor'),
-    changeBlackToWhite = document.getElementsByClassName('changeBlackToWhite'),
-    // allHorizontalDots = document.getElementsByClassName('horizontalDots'),
-    allForecastBoxes = document.getElementsByClassName('forecastBox'),
+    changeBlackToWhite = document.getElementsByClassName('changeBlackToWhite'),    allForecastBoxes = document.getElementsByClassName('forecastBox'),
     moreInfoBox = document.getElementById('moreInfoBox'),
     faveCityBox = document.getElementsByClassName('favoriteCityBox'),
     mySidenav = document.getElementById("mySidenav"),
-    allRemoveBtns = document.getElementsByClassName("removeBtn"),
     allNameBtns = document.getElementsByClassName("nameSide"),
     dayTime = true,
     errorBox = document.getElementById('errorBox');

@@ -1,28 +1,11 @@
-import { fetchCurrentData, forecastData} from "./fetches.js";
+import { fetchCurrentData} from "./fetches.js";
 import {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage} from "./localStorage.js";
-import {addFavoriteCityToList, removeFavoritesCityFromList} from "./components.js";
+import {addFavoriteCityToList} from "./components.js";
 import {success, error, options, currentLat, currentLon} from "./geolocation.js";
-import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, allForecastWeatherIcons, errorOverlay} from "./displayData.js"
+import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, errorOverlay} from "./displayData.js"
 
 
 let selectedCity = document.getElementById('selectedCity'),
-    currentWeatherIcon = document.getElementById('currentWeatherIcon'),
-    currentTempTxt = document.getElementById('currentTempTxt'),
-    // allHorizontalDots = document.getElementsByClassName('dayHr'),
-    // allDayModeFontColor = document.getElementsByClassName('allDayModeFontColor'),
-    // allWhiteBg = document.getElementsByClassName('whiteBg'),
-    weatherDescTxt = document.getElementById('weatherDescTxt'),
-    currentHighTempTxt = document.getElementById('currentHighTempTxt'),
-    favesContainer = document.getElementById('favesContainer'),
-    currentLowTempTxt = document.getElementById('currentLowTempTxt'),
-    currentHourTxt = document.getElementById('currentHourTxt'),
-    morningTempTxt = document.getElementById('morningTempTxt'),
-    // allVerticalDots = document.getElementsByClassName('vertical_dotted_line'),
-    dayTempTxt = document.getElementById('dayTempTxt'),
-    nightTempTxt = document.getElementById('nightTempTxt'),
-    // allForecastBoxes = document.getElementsByClassName('allForecastBoxes'),
-    // allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon'),
-    moreInfoBox = document.getElementById('moreInfoBox'),
     whicheverDayClickedTxt = document.getElementById('whicheverDayClickedTxt'),
     faveBtn = document.getElementById('faveBtn'),
     weatherDescForWhicheverDayClicked = document.getElementById('weatherDescForWhicheverDayClicked'),

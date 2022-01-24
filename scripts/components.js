@@ -85,18 +85,6 @@ function addFavoriteCityToList(cityName)
     favoriteCitiesArr.push(cityName);
 }
 
-// for(let i = 0; i<removeBtns.length; i++)
-// {
-// removeBtns[i].addEventListener('click', function(e){
-//     // console.log(removeBtns[i].value);
-//     // console.log(typeof(allFavorites));
-//     // console.log(allFavorites);
-//     // debugger;
-//     removeFromLocalStorage(removeBtns[i].value);
-//     // removeFavoritesCityFromList(removeBtns[i].value);
-// })
-// }
-
 function removeFavoritesCityFromList(buttonValue)
 {
     // check if the value of the removeBtn is in the array of favoriteCities

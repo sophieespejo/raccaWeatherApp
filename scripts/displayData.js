@@ -11,7 +11,18 @@ let latitude;
 let longitude;
 let allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon'),
     errorOverlay = document.getElementById('errorOverlay'),
-    todayTxt = document.getElementById('todayTxt');
+    todayTxt = document.getElementById('todayTxt'),
+    currentWeatherIcon = document.getElementById('currentWeatherIcon'),
+    currentTempTxt = document.getElementById('currentTempTxt'),
+    weatherDescTxt = document.getElementById('weatherDescTxt'),
+    currentHighTempTxt = document.getElementById('currentHighTempTxt'),
+    // favesContainer = document.getElementById('favesContainer'),
+    currentLowTempTxt = document.getElementById('currentLowTempTxt'),
+    currentHourTxt = document.getElementById('currentHourTxt'),
+    morningTempTxt = document.getElementById('morningTempTxt'),
+    dayTempTxt = document.getElementById('dayTempTxt'),
+    nightTempTxt = document.getElementById('nightTempTxt');
+    // moreInfoBox = document.getElementById('moreInfoBox');
 
 export function getCurrentTxt(data){
     currentTempTxt.textContent = Math.round(data.main.temp);
