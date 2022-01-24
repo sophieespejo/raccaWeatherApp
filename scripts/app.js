@@ -54,7 +54,7 @@ for(let i = 0; i<forecastBtns.length; i++)
 
 function getWeatherDescBasedOnDay(buttonValue)
 {
-  moreInfoBox.classList.toggle('d-none');
+  moreInfoBox.classList.remove('d-none');
   switch(buttonValue)
   {
     case "0":
