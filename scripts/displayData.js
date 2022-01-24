@@ -10,7 +10,8 @@ let dayOrNight;
 let latitude;
 let longitude;
 let allForecastWeatherIcons = document.getElementsByClassName('fiveDayIcon'),
-    errorOverlay = document.getElementById('errorOverlay');
+    errorOverlay = document.getElementById('errorOverlay'),
+    todayTxt = document.getElementById('todayTxt');
 
 export function getCurrentTxt(data){
     currentTempTxt.textContent = Math.round(data.main.temp);
@@ -18,7 +19,9 @@ export function getCurrentTxt(data){
     currentLowTempTxt.textContent = Math.round(data.main.temp_min);
     currentHighTempTxt.textContent = Math.round(data.main.temp_max);
     selectedCity.textContent = data.name;
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let time = new Date(data.dt*1000);
+    todayTxt.textContent = days[time.getDay()];
     let utc_offset = time.getTimezoneOffset();
     time.setMinutes(time.getMinutes()+ utc_offset);
     let cityOffSet = data.timezone/60;
@@ -77,9 +80,9 @@ export function getCurrentTxtFromGeolocation()
     weatherDescTxt.textContent = forecastData.hourly[0].weather[0].description;
     currentLowTempTxt.textContent = Math.round(forecastData.daily[0].temp.min);
     currentHighTempTxt.textContent = Math.round(forecastData.daily[0].temp.max);
-    console.log(cityNameData);
-    selectedCity.textContent = cityNameData.city.name;
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let time = new Date(forecastData.current.dt*1000);
+    todayTxt.textContent = days[time.getDay()];
     let utc_offset = time.getTimezoneOffset();
     time.setMinutes(time.getMinutes()+ utc_offset);
     let cityOffSet = forecastData.timezone_offset/60;

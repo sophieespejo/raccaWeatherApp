@@ -1,5 +1,6 @@
  import {dOrNSearch} from "./darkMode.js";
  import {getForecastTxt, getCurrentTxt, getCurrentTxtFromGeolocation, errorMsg, errorOverlay} from "./displayData.js";
+ import {currentLat, currentLon} from "./geolocation.js";
  
  let data, forecastData, cityNameData;
 
@@ -14,7 +15,7 @@ export function fetchCurrentData(location)
             console.log(data);
             return data;
         }
-    )
+    ).catch( error => errorMsg())
 }
 // export function fetchCurrentData(location)
 // {
@@ -44,18 +45,23 @@ export function fetchCurrentWeatherFromGeolocation(latitude, longitude)
     ).then(
         data => {
             forecastData = data;
-            getForecastTxt(forecastData);
-            getCurrentTxtFromGeolocation(forecastData);
+            setTimeout(getForecastTxt(forecastData), 200);
+            setTimeout(getCurrentTxtFromGeolocation(forecastData), 300);
+            setTimeout(getCityNameFromGeolocation(currentLat, currentLon), 300);
             return forecastData;
         }
     )
+}
+
+function getCityNameFromGeolocation(latitude, longitude)
+{
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&exclude=minutely&appid=7501411bffa05223726106f51f48642c`).then(
         response => response.json()
     ).then(
         data => {
             cityNameData = data;
             console.log(cityNameData);
-            return cityNameData;
+            selectedCity.textContent = cityNameData.city.name;
         }
     )
 }

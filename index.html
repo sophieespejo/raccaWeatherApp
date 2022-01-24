@@ -82,7 +82,7 @@
           <div class="container currentWeatherContainer whiteBg changeBlackToWhite">
             <div class="row justify-content-between">
               <div class="col-2 mt-3 text-start">
-                <p class="locationTxt dayModeFontColor changeFontColor">TODAY</p>
+                <p id="todayTxt" class="locationTxt dayModeFontColor changeFontColor">TODAY</p>
               </div>
               <div class="col-6 mt-3 text-end">
                 <p class="timeTxt dayModeFontColor changeFontColor"><span id="currentHourTxt">HH:MM</span></p>
@@ -298,7 +298,7 @@
         <div class="row mt-5 justify-content-center">
           <div id="errorBox" class="col-6 errorBox text-center mt-5">
             <img src="./images/noLocationIcon.svg" alt="">
-            <p class="errorMsg">whoops.</p>
+            <p class="errorMsg dayModeFontColor changeFontColor">whoops.</p>
             <p class="tryAgainTxt dayModeFontColor changeFontColor">The city you searched cannot be found.</p>
             <p class="tryAgainTxt dayModeFontColor changeFontColor">Please try another location.</p>
             <div class="row mt-4 justify-content-center">

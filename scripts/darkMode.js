@@ -1,6 +1,7 @@
 //checks to see if user is located in day or night
 //searches current fecth data and checks if icon includes "d" or "n"
-import {allForecastWeatherIcons } from "./displayData.js";
+import {allForecastWeatherIcons, errorOverlay } from "./displayData.js";
+
 
 
 let wholePage = document.getElementById('wholePage'), 
@@ -13,7 +14,8 @@ let wholePage = document.getElementById('wholePage'),
     mySidenav = document.getElementById("mySidenav"),
     allRemoveBtns = document.getElementsByClassName("removeBtn"),
     allNameBtns = document.getElementsByClassName("nameSide"),
-    dayTime = true;
+    dayTime = true,
+    errorBox = document.getElementById('errorBox');
 
 function dOrNSearch (dayOrNight)
 {
@@ -50,6 +52,8 @@ function dOrNSearch (dayOrNight)
             favesBox.className = "col-12 favoriteCityBox favoriteCityBoxDayMode"
         })
         mySidenav.className = "sidenav favesBox favesBoxDayMode";
+        errorOverlay.className = "overlay d-none";
+        errorBox.className = "col-6 errorBox text-center mt-5";
     }
     else{
         dayTime = false;
@@ -84,6 +88,8 @@ function dOrNSearch (dayOrNight)
             favesBox.className = "col-12 favoriteCityBox favoritesCityBoxDarkMode"
         })
         mySidenav.className = "sidenav favesBox favesBoxDarkMode";
+        errorOverlay.className = "overlayDarkMode d-none";
+        errorBox.className = "col-6 errorBoxDarkMode text-center mt-5";
     }
     return dayTime;
 }
