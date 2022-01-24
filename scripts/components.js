@@ -3,6 +3,7 @@
 import { fetchCurrentData } from "./fetches.js";
 import { removeFromLocalStorage, favoriteCities } from "./localStorage.js";
 import {dayTime} from "./darkMode.js";
+import {prod} from "./environment.js";
 let favoriteCitiesArr = [];
 
 function addFavoriteCityToList(cityName)
@@ -39,7 +40,7 @@ function addFavoriteCityToList(cityName)
     nameBtn.textContent = cityName;
     nameBtn.value = cityName;
     nameBtn.addEventListener('click', function(e){
-        fetchCurrentData(nameBtn.value)
+        fetchCurrentData(nameBtn.value, prod.apiKey)
     })
     //append nameBtn to col10
     col10.appendChild(nameBtn);
