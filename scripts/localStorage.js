@@ -1,3 +1,5 @@
+import {displayFavoriteCitiesOnDom} from "./components.js";
+
 let favoriteCities = [];
 
 function saveToLocalStorageByCityName(cityName)
@@ -19,8 +21,10 @@ function saveToLocalStorage()
 //     return favoriteCities;
 // }
 
+
 function GetLocalStorage()
 {
+    let localStorageData = localStorage.getItem('Favorites');
     if(localStorage.getItem('Favorites'))
     {
         favoriteCities = JSON.parse(localStorageData);
@@ -28,7 +32,7 @@ function GetLocalStorage()
     else{
         saveToLocalStorage();
     }
-    console.log(favoriteCities);
+    displayFavoriteCitiesOnDom(favoriteCities);
     return favoriteCities;
 }
 
@@ -44,4 +48,4 @@ function removeFromLocalStorage(cityName){
 
 
 
-export {saveToLocalStorageByCityName, GetLocalStorage,  removeFromLocalStorage}
+export {saveToLocalStorageByCityName, GetLocalStorage,  removeFromLocalStorage, favoriteCities}

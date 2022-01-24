@@ -2,7 +2,7 @@ import { fetchCurrentData} from "./fetches.js";
 import {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage} from "./localStorage.js";
 import {addFavoriteCityToList, removeFavoritesCityFromList} from "./components.js";
 import {success, error, options, currentLat, currentLon} from "./geolocation.js";
-import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, allForecastWeatherIcons} from "./displayData.js"
+import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, allForecastWeatherIcons, errorOverlay} from "./displayData.js"
 
 
 let selectedCity = document.getElementById('selectedCity'),
@@ -32,12 +32,12 @@ let selectedCity = document.getElementById('selectedCity'),
     noonWeatherIconForWhicheverDayClicked = document.getElementById('noonWeatherIconForWhicheverDayClicked'),
     nightWeatherIconForWhicheverDayClicked = document.getElementById('nightWeatherIconForWhicheverDayClicked'),
     nightTempTxtForWhicheverDayClicked = document.getElementById('nightTempTxtForWhicheverDayClicked'),
-    errorOverlay = document.getElementById('errorOverlay'),
+    // errorOverlay = document.getElementById('errorOverlay'),
     errorBox = document.getElementById('errorBox'),
-    searchAgainBtn = document.getElementById('searchAgainBtn'),
     forecastBtns = document.getElementsByClassName('forecastBtn'),
     dates1 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    heartIcon = document.getElementById('heartIcon');
+    heartIcon = document.getElementById('heartIcon'),
+    searchAgainBtn = document.getElementById('searchAgainBtn');
 
 
 
@@ -122,3 +122,11 @@ faveBtn.addEventListener('click', function(e){
   addFavoriteCityToList(citySearch.value);
   citySearch.value = "";
 })
+
+searchAgainBtn.addEventListener('click', function()
+{
+    errorOverlay.classList.add("d-none");
+})
+
+
+GetLocalStorage();

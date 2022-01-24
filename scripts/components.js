@@ -1,9 +1,9 @@
 //make function that will create the favorite city list
 
 import { fetchCurrentData } from "./fetches.js";
-import { removeFromLocalStorage } from "./localStorage.js";
+import { removeFromLocalStorage, favoriteCities } from "./localStorage.js";
 import {dayTime} from "./darkMode.js";
-let favoriteCities = [];
+let favoriteCitiesArr = [];
 
 function addFavoriteCityToList(cityName)
 {
@@ -82,7 +82,7 @@ function addFavoriteCityToList(cityName)
     //inject to dom
     injectHere.append(mainRow);
     
-    favoriteCities.push(cityName);
+    favoriteCitiesArr.push(cityName);
 }
 
 // for(let i = 0; i<removeBtns.length; i++)
@@ -100,9 +100,9 @@ function addFavoriteCityToList(cityName)
 function removeFavoritesCityFromList(buttonValue)
 {
     // check if the value of the removeBtn is in the array of favoriteCities
-    if(favoriteCities.includes(buttonValue))
+    if(favoriteCitiesArr.includes(buttonValue))
     {
-        let cityIndex = favoriteCities.indexOf(buttonValue);
+        let cityIndex = favoriteCitiesArr.indexOf(buttonValue);
         console.log('removed' + cityIndex);
         injectHere.removeChild(injectHere.childNodes[cityIndex+3]);
     }
@@ -113,5 +113,13 @@ function removeFavoritesCityFromList(buttonValue)
     // console.log(buttonValue);
 }
 
+function displayFavoriteCitiesOnDom(favoriteCities)
+{
+    for(let i = 0; i<favoriteCities.length; i++)
+    {
+        addFavoriteCityToList(favoriteCities[i])
+    }
+}
 
-export {removeFavoritesCityFromList, addFavoriteCityToList}
+
+export {removeFavoritesCityFromList, addFavoriteCityToList, displayFavoriteCitiesOnDom}
