@@ -15,7 +15,7 @@ export function fetchCurrentData(location)
             console.log(data);
             return data;
         }
-    ).catch( error => errorMsg())
+    ).catch( error => errorMsg()) 
 }
 // export function fetchCurrentData(location)
 // {

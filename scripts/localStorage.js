@@ -13,15 +13,6 @@ function saveToLocalStorage()
     localStorage.setItem('Favorites', JSON.stringify(favoriteCities));
 }
 
-// function GetLocalStorage()
-// {
-//     let localStorageData = localStorage.getItem('Favorites');
-//     favoriteCities = JSON.parse(localStorageData);
-//     console.log(favoriteCities);
-//     return favoriteCities;
-// }
-
-
 function GetLocalStorage()
 {
     let localStorageData = localStorage.getItem('Favorites');

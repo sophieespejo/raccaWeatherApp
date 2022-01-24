@@ -1,4 +1,4 @@
-import { fetchCurrentData} from "./fetches.js";
+import { fetchCurrentData, forecastData} from "./fetches.js";
 import {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage} from "./localStorage.js";
 import {addFavoriteCityToList, removeFavoritesCityFromList} from "./components.js";
 import {success, error, options, currentLat, currentLon} from "./geolocation.js";
@@ -56,22 +56,20 @@ let openBtn = document.getElementById('openBtn'),
 
   searchBtn.addEventListener('click',  function(e){
       heartIcon.className = "far fa-heart";
-      fetchCurrentData(citySearch.value);
+      fetchCurrentData(citySearch.value, 'imperial');
   })
 
 for(let i = 0; i<forecastBtns.length; i++)
 {
   forecastBtns[i].addEventListener('click', function(e){
     getWeatherDescBasedOnDay(this.value);
-
   })
 }
 
 
-
 function getWeatherDescBasedOnDay(buttonValue)
 {
-  moreInfoBox.classList.remove('d-none');
+  moreInfoBox.classList.toggle('d-none');
   switch(buttonValue)
   {
     case "0":

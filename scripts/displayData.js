@@ -1,4 +1,4 @@
-import {data, forecastData, fetch5DayForecastFromCityName, cityNameData} from "./fetches.js";
+import {data, forecastData, fetch5DayForecastFromCityName} from "./fetches.js";
 import {dOrNSearch} from "./darkMode.js";
 
 let allForecastWeatherDesc = [];
@@ -89,6 +89,8 @@ export function getCurrentTxtFromGeolocation()
     time.setMinutes(time.getMinutes()+ cityOffSet);
     let hour = time.toLocaleTimeString ('en-US', {hour: '2-digit', hour12: true, minute: '2-digit'});
     currentHourTxt.textContent = hour;
+    dayOrNight = forecastData.hourly[0].weather[0].icon;
+    dOrNSearch(dayOrNight);
 
 }
 
