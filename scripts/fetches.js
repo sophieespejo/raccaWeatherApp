@@ -9,7 +9,7 @@
 export function fetchCurrentData(location, apiKey)
 {
     
-     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`).then(
+     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`).then(
         response => response.json()
     ).then(
         data => {
