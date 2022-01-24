@@ -2,7 +2,8 @@ import { fetchCurrentData} from "./fetches.js";
 import {saveToLocalStorageByCityName, GetLocalStorage, removeFromLocalStorage} from "./localStorage.js";
 import {addFavoriteCityToList} from "./components.js";
 import {success, error, options, currentLat, currentLon} from "./geolocation.js";
-import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, errorOverlay} from "./displayData.js"
+import {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, errorOverlay} from "./displayData.js";
+import {prod, dev} from "./environment.js";
 
 
 let selectedCity = document.getElementById('selectedCity'),
@@ -39,7 +40,7 @@ let openBtn = document.getElementById('openBtn'),
 
   searchBtn.addEventListener('click',  function(e){
       heartIcon.className = "far fa-heart";
-      fetchCurrentData(citySearch.value, 'imperial');
+      fetchCurrentData(citySearch.value, prod.apiKey);
   })
 
 for(let i = 0; i<forecastBtns.length; i++)
@@ -48,6 +49,7 @@ for(let i = 0; i<forecastBtns.length; i++)
     getWeatherDescBasedOnDay(this.value);
   })
 }
+
 
 
 function getWeatherDescBasedOnDay(buttonValue)

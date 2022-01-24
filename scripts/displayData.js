@@ -1,5 +1,6 @@
 import {data, forecastData, fetch5DayForecastFromCityName} from "./fetches.js";
 import {dOrNSearch} from "./darkMode.js";
+import {prod, dev} from "./environment.js";
 
 let allForecastWeatherDesc = [];
 let dates = [];
@@ -44,7 +45,7 @@ export function getCurrentTxt(data){
     console.log(data.weather[0].icon);
     latitude = data.coord.lat;
     longitude = data.coord.lon;
-    fetch5DayForecastFromCityName(latitude, longitude);
+    fetch5DayForecastFromCityName(latitude, longitude, prod.apiKey);
     dOrNSearch(dayOrNight);
 }
 
@@ -80,7 +81,6 @@ export function getForecastTxt(forecastData){
     morningTempTxt.textContent = Math.round(forecastData.daily[0].temp.morn);
     dayTempTxt.textContent = Math.round(forecastData.daily[0].temp.day);
     nightTempTxt.textContent = Math.round(forecastData.daily[0].temp.night);
-
 
     return {allForecastWeatherDesc, dates, allForecastMornTemps, allForecastNoonTemps, allForecastNightTemps, allForecastWeatherIcons};
 }
